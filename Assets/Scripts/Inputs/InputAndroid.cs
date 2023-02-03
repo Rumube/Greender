@@ -1,0 +1,72 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Windows;
+
+public class InputAndroid : MonoBehaviour
+{
+    private GameObject _perfil = null;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (UnityEngine.Input.touchCount > 0)
+        {
+            Touch touch = UnityEngine.Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    //INPUT
+                    print("Began");
+                    InputBegan(touch);
+                    break;
+                case TouchPhase.Moved:
+                case TouchPhase.Stationary:
+                    //DRAG
+                    print("DRAG");
+                    InputDrag(touch);
+                    break;
+                case TouchPhase.Ended:
+                case TouchPhase.Canceled:
+                    //DROP
+                    print("DROP");
+                    InputDrop();
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private void InputBegan(Touch touch)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(touch.position, -Vector2.up, Mathf.Infinity);
+        if (hit)
+        {
+            if (hit.transform.gameObject.tag == "Perfil")
+            {
+                _perfil = hit.transform.gameObject;
+            }
+        }
+    }
+    private void InputDrag(Touch touch)
+    {
+        if(_perfil != null)
+        {
+            _perfil.GetComponent<ImgPerfil>().MovePerfil(touch.position);
+        }
+    }
+    private void InputDrop()
+    {
+        if(_perfil != null)
+        {
+            _perfil.GetComponent<ImgPerfil>().Volver();
+            _perfil = null;
+        }
+    }
+}
