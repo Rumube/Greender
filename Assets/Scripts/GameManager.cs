@@ -77,5 +77,9 @@ public class GameManager : MonoBehaviour
     {
         CambiarEscena(GAME_STATE.SELECCION);
     }
+    public void CargarPerfilPropio()
+    {
+        CambiarEscena(GAME_STATE.PERFIL_PROPIO);
+    }
     #endregion
 }

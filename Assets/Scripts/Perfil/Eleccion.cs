@@ -7,6 +7,14 @@ public class Eleccion : MonoBehaviour
     public bool _isLike;
     public GameObject _manager;
 
+    private void Start()
+    {
+        if(_manager == null)
+        {
+            _manager = GameObject.FindGameObjectWithTag("Manager");
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Selector")

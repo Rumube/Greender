@@ -565,6 +565,7 @@ GameObject:
   - component: {fileID: 5096259070732019189}
   - component: {fileID: 5096259070732019146}
   - component: {fileID: 5096259070732019147}
+  - component: {fileID: 1526475360}
   m_Layer: 5
   m_Name: CanvasPerfilPropio
   m_TagString: Untagged
@@ -654,6 +655,47 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1526475360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096259070732019145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90a6896827b30d44bdd11c346d4622c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _generarBio: 0
+  _isUser: 0
+  _name: 
+  _etiquetas: []
+  _bio: []
+  _edad: 0
+  _distancia: 0
+  _cuerpo: {fileID: 0}
+  _ojos: {fileID: 0}
+  _boca: {fileID: 0}
+  _brazos: {fileID: 0}
+  _piernas: {fileID: 0}
+  _fondo: {fileID: 0}
+  _posibleCuerpo: []
+  _posibleOjos: []
+  _posibleBocas: []
+  _posibleBrazos: []
+  _posiblePiernas: []
+  _posibleFondo: []
+  _posibleEtiquetas: []
+  _posibleNombres: []
+  _posibleBio: []
+  _nameTxt: {fileID: 0}
+  _bioTxt: {fileID: 0}
+  _edadTxt: {fileID: 0}
+  _etiquetaGO: {fileID: 0}
+  _etiquetasParent: {fileID: 0}
+  _panelEtiquetas: {fileID: 0}
+  _panelEtiquetasParent: {fileID: 0}
 --- !u!1 &5096259070772394805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1910,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PerfilPropio, Assembly-CSharp
-        m_MethodName: SetPerfilData
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
