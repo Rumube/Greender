@@ -123,6 +123,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &202578114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5096259070845012031, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
+  m_PrefabInstance: {fileID: 1526475355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &351794182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5096259071749022075, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
+  m_PrefabInstance: {fileID: 1526475355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &403483270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1342,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 711245042}
     m_Modifications:
+    - target: {fileID: 1526475360, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
+      propertyPath: _panelEtiquetasParent
+      value: 
+      objectReference: {fileID: 202578114}
+    - target: {fileID: 1526475360, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
+      propertyPath: _panelEtiquetasActuales
+      value: 
+      objectReference: {fileID: 351794182}
     - target: {fileID: 5096259070732019144, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1419,6 +1437,22 @@ PrefabInstance:
     - target: {fileID: 5096259070732019145, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
       propertyPath: m_Name
       value: CanvasPerfilPropio
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096259070845012027, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
+      propertyPath: m_Spacing.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096259070845012027, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
+      propertyPath: m_Spacing.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096259070845012027, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
+      propertyPath: m_CellSize.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096259070845012027, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5096259071432504917, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
