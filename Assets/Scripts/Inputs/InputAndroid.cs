@@ -8,6 +8,7 @@ public class InputAndroid : MonoBehaviour
     private GameObject _perfil = null;
 
     public GameObject _likeAnim;
+    public GameObject _nopeAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -73,12 +74,11 @@ public class InputAndroid : MonoBehaviour
             }else if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInNope())
             {
                 //NOPE!
+                _nopeAnim.GetComponent<Animator>().Play("Nope_Anim");
                 GetComponent<Perfil>().GenerarNuevoPerfil();
             }
-            else
-            {
-                GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().Volver();
-            }
+            GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().Volver();
+
             _perfil = null;
         }
     }
