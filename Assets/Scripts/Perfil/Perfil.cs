@@ -14,20 +14,16 @@ public class Perfil : MonoBehaviour
     public int _edad = 0;
     public int _distancia = 0;
     [Header("Imagen Perfil")]
-    public Sprite _cuerpo;
-    public Sprite _ojos;
-    public Sprite _boca;
-    public Sprite _brazos;
-    public Sprite _piernas;
-    public Sprite _fondo;
+    public GameObject _cuerpo;
+    public GameObject _ojos;
+    public GameObject _boca;
+    public GameObject _brazos;
 
     [Header("PosibleImg")]
     public List<Sprite> _posibleCuerpo = new List<Sprite>();
     public List<Sprite> _posibleOjos = new List<Sprite>();
     public List<Sprite> _posibleBocas = new List<Sprite>();
     public List<Sprite> _posibleBrazos = new List<Sprite>();
-    public List<Sprite> _posiblePiernas = new List<Sprite>();
-    public List<Sprite> _posibleFondo = new List<Sprite>();
     [Header("Datos Posibles")]
     public List<string> _posibleEtiquetas = new List<string>();
     public List<string> _posibleNombres = new List<string>();
@@ -59,10 +55,19 @@ public class Perfil : MonoBehaviour
         GenerarImagen();
         GenerateEdad();
         GenerateDistancia();
+        GenerateImg();
         CargarData();
         GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().CargarEscena(this);
     }
+    private void GenerateImg(){
+    _cuerpo = GameObject.FindObjectsWithTag("Cuerpo");
+    _ojos = GameObject.FindObjectsWithTag("Ojos");
+    _boca = GameObject.FindObjectsWithTag("Boca");
+    _brazos = GameObject.FindObjectsWithTag("Brazos");
 
+        _cuerpo.GetComponent<Sprite>().sprite = Random.Range(0, _posibleCuerpo.Count - 1);
+
+    }
     private void GenerarNombre()
     {
         _name = _posibleNombres[Random.Range(0, _posibleNombres.Count - 1)];
