@@ -147,7 +147,6 @@ public class Perfil : MonoBehaviour
         _ojos = GameObject.FindGameObjectWithTag("Ojos");
         _boca = GameObject.FindGameObjectWithTag("Boca");
         _brazos = GameObject.FindGameObjectWithTag("Brazos");
-        90
 
         _cuerpo.GetComponent<Image>().sprite = _posibleCuerpo[Random.Range(0, _posibleCuerpo.Count - 1)];
         _ojos.GetComponent<Image>().sprite = _posibleOjos[Random.Range(0, _posibleOjos.Count - 1)];
