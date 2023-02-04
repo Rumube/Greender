@@ -99,7 +99,6 @@ public class PerfilPropio : Perfil
         }
         _panelEtiquetasActuales.GetComponent<EtiquetasActuales>().UpdateEtiquetas();
     }
-
     #region boton
     public void SetPerfilData()
     {
@@ -127,6 +126,12 @@ public class PerfilPropio : Perfil
         _ojos.GetComponent<Image>().sprite = _posibleOjos[UnityEngine.Random.Range(0, _posibleOjos.Count - 1)];
         _boca.GetComponent<Image>().sprite = _posibleBocas[UnityEngine.Random.Range(0, _posibleBocas.Count - 1)];
         _brazos.GetComponent<Image>().sprite = _posibleBrazos[UnityEngine.Random.Range(0, _posibleBrazos.Count - 1)];
+    }
+    public void SaveDataInit()
+    {
+        _name = _nameTxt.GetComponent<TMP_InputField>().text;
+        _edad = int.Parse(_edadTxt.GetComponent<TMP_InputField>().text);
+        //NEXT SCENE
     }
     #endregion
 }
