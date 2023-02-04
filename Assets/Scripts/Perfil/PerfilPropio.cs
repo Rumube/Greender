@@ -68,7 +68,7 @@ public class PerfilPropio : Perfil
     }
     public void InitPanelEtiquetas()
     {
-        foreach (String currentEt in _posibleEtiquetas)
+        foreach (String currentEt in _manager.GetComponent<Perfil>()._posibleEtiquetas)
         {
             GameObject newEt = Instantiate(_etiquetaGO, _panelEtiquetasParent.transform);
             newEt.name = currentEt;

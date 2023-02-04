@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Etiquetas : MonoBehaviour
 {
-    public List<string> _etiquetas = new List<string>();
+    private string _etiqueta;
+
+    public void SetEtiqueta(string etiqueta)
+    {
+
+    }
+
 }
