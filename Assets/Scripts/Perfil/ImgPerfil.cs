@@ -14,6 +14,8 @@ public class ImgPerfil : MonoBehaviour
     private bool _return = false;
     public bool _seleccionado = false;
     private float _finSelect = 0;
+    private bool _inLike = false;
+    private bool _inNope = false;
 
     [Header("Parfil Data")]
     public TextMeshProUGUI _nombreTxt;
@@ -32,7 +34,7 @@ public class ImgPerfil : MonoBehaviour
         if (_return)
         {
             _imagen.transform.position = Vector2.Lerp(_imagen.transform.position, _initPos, 7 * Time.deltaTime);
-            if(_imagen.transform.position == _initPos)
+            if (_imagen.transform.position == _initPos)
             {
                 _return = false;
             }
@@ -65,5 +67,23 @@ public class ImgPerfil : MonoBehaviour
         _nombreTxt.text = perfil._name;
         _edadTxt.text = perfil._edad.ToString();
         _distanciaTxt.text = perfil._distancia.ToString();
+    }
+
+    public void SetInLike(bool inLike)
+    {
+        _inLike = inLike;
+    }
+    public void SetInNope(bool inNope)
+    {
+        _inNope = inNope;
+    }
+    public bool GetInLike()
+    {
+        return _inLike;
+    }
+
+    public bool GetInNope()
+    {
+        return _inNope;
     }
 }

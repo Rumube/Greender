@@ -33,6 +33,11 @@ public class Perfil : MonoBehaviour
     public List<string> _posibleNombres = new List<string>();
     public List<string> _posibleBio = new List<string>();
 
+    private void Start()
+    {
+        GenerarNuevoPerfil();
+    }
+
     // Update is called once per frame
     void Update()
     {
