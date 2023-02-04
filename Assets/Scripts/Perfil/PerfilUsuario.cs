@@ -35,12 +35,19 @@ public class PerfilUsuario : MonoBehaviour
         _nombreTxt.text = _name;
         _edadTxt.text = _edad.ToString();
         _distanciaTxt.text = _distancia.ToString();
-
+        BorrarEtiquetas();
         foreach (String currentEt in perfil._etiquetas)
         {
             GameObject newEt = Instantiate(_etiquetaGO, _etiquetasParent.transform);
             newEt.name = currentEt;
             newEt.GetComponentInChildren<TextMeshProUGUI>().text = currentEt;
+        }
+    }
+
+    private void BorrarEtiquetas()
+    {
+        foreach (Transform currentChild in _etiquetasParent.transform) {
+            GameObject.Destroy(currentChild.gameObject);
         }
     }
 }
