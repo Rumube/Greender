@@ -143,6 +143,47 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5096259071749022075, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
   m_PrefabInstance: {fileID: 1526475355}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &351794186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351794182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5c467039285df49aaa5a67f00bc7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _etiquetaGO: {fileID: 121770656487547377, guid: dbb66679c7affe743aa71f15d8a1e864, type: 3}
+  _perfilManager: {fileID: 405537656}
+  _actuales: []
+  _actualesGO: []
+  _parentEtiquetas: {fileID: 351794182}
+--- !u!114 &351794187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351794182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 2
+  m_ConstraintCount: 3
 --- !u!1 &403483270
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365663, guid: c05df32167de5944fb12e6daf2c25b70, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365663, guid: c05df32167de5944fb12e6daf2c25b70, type: 3}
       propertyPath: m_AnchorMax.x
@@ -557,7 +598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8558464284193144780, guid: a052b25cee32018428c98421c563e500, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8558464284193144780, guid: a052b25cee32018428c98421c563e500, type: 3}
       propertyPath: m_AnchorMax.x
@@ -668,7 +709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5096259070732019144, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5096259070732019144, guid: 82ef2740d4e556248933f08c0b0e0f10, type: 3}
       propertyPath: m_AnchorMax.x

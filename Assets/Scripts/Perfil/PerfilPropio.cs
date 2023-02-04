@@ -17,9 +17,10 @@ public class PerfilPropio : Perfil
     [Header("Panel Etiquetas")]
     public GameObject _panelEtiquetas;
     public GameObject _panelEtiquetasParent;
-    public GameObject _panelEtiquetasActuales;
     private List<GameObject> _panelEtiquetasList;
     private GameManager _manager;
+    public GameObject _panelEtiquetasActuales;
+    public List<string> _etiquetasPropias = new List<string>();
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class PerfilPropio : Perfil
         _isUser= true;
         _name = null;
         _edad = 0;
-        _etiquetas.Clear();
+        _etiquetasPropias.Clear();
         if(_manager == null)
         {
             _manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
@@ -55,7 +56,7 @@ public class PerfilPropio : Perfil
         {
             ClearEtiquetas(_etiquetasParent.transform, _etiquetasList);
         }
-        foreach (String currentEt in _etiquetas)
+        foreach (String currentEt in _etiquetasPropias)
         {
             GameObject newEt = Instantiate(_etiquetaGO, _etiquetasParent.transform);
             newEt.name = currentEt;
@@ -68,7 +69,7 @@ public class PerfilPropio : Perfil
         {
             ClearEtiquetas(_panelEtiquetasParent.transform, _panelEtiquetasList);
         }
-        foreach (String currentEt in _etiquetas)
+        foreach (String currentEt in _etiquetasPropias)
         {
             GameObject newEt = Instantiate(_etiquetaGO, parent);
             newEt.name = currentEt;
@@ -87,15 +88,15 @@ public class PerfilPropio : Perfil
     }
     public void EtiquetaPulsada(string etiqueta)
     {
-        if (_etiquetas.Contains(etiqueta))
+        if (_etiquetasPropias.Contains(etiqueta))
         {
-            _etiquetas.Remove(etiqueta);
+            _etiquetasPropias.Remove(etiqueta);
         }
         else
         {
-            _etiquetas.Add(etiqueta);
+            _etiquetasPropias.Add(etiqueta);
         }
-        SetEtiquetas(_panelEtiquetasActuales.transform);
+        _panelEtiquetasActuales.GetComponent<EtiquetasActuales>().UpdateEtiquetas();
     }
 
     #region boton
