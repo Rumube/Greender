@@ -33,8 +33,8 @@ public class PerfilUsuario : MonoBehaviour
         //UPDATE UI
 
         _nombreTxt.text = _name;
-        _edadTxt.text = _edad.ToString();
-        _distanciaTxt.text = _distancia.ToString();
+        _edadTxt.text = _edad.ToString() + " días";
+        _distanciaTxt.text = "A " + _distancia.ToString() + " huertos de ti";
         BorrarEtiquetas();
         foreach (String currentEt in perfil._etiquetas)
         {
@@ -46,7 +46,8 @@ public class PerfilUsuario : MonoBehaviour
 
     private void BorrarEtiquetas()
     {
-        foreach (Transform currentChild in _etiquetasParent.transform) {
+        foreach (Transform currentChild in _etiquetasParent.transform)
+        {
             GameObject.Destroy(currentChild.gameObject);
         }
     }
