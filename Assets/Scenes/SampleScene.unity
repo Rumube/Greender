@@ -1846,6 +1846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isLike: 1
+  _manager: {fileID: 1510250023}
 --- !u!1 &1305243240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,6 +1964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isLike: 0
+  _manager: {fileID: 1510250023}
 --- !u!1 &1322135123
 GameObject:
   m_ObjectHideFlags: 0

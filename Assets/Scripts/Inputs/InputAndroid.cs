@@ -63,7 +63,18 @@ public class InputAndroid : MonoBehaviour
     {
         if(_perfil != null)
         {
-            GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().Volver();
+            if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInLike())
+            {
+                //LIKE!
+            }else if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInNope())
+            {
+                //NOPE!
+                GetComponent<Perfil>().GenerarNuevoPerfil();
+            }
+            else
+            {
+                GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().Volver();
+            }
             _perfil = null;
         }
     }
