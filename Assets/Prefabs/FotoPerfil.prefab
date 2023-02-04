@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 2734440158912280448}
   - component: {fileID: 6685716959839864437}
   - component: {fileID: 2317045944699307347}
-  - component: {fileID: 4980380584080977678}
   m_Layer: 5
   m_Name: SpawnBoca
-  m_TagString: Boca
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,26 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &4980380584080977678
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057977378102744974}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68eca740052c9344695de28cb1da5cd0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1284391349924089637
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,10 +87,9 @@ GameObject:
   - component: {fileID: 1500763863037467168}
   - component: {fileID: 2434219441595318390}
   - component: {fileID: 8620031783498109712}
-  - component: {fileID: 6402557272029546039}
   m_Layer: 5
   m_Name: SpawnOjos
-  m_TagString: Ojos
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,26 +152,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &6402557272029546039
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284391349924089637}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68eca740052c9344695de28cb1da5cd0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8576451188089815953
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,10 +163,9 @@ GameObject:
   - component: {fileID: 6068544891595276730}
   - component: {fileID: 7001069318150984430}
   - component: {fileID: 7704648030774601028}
-  - component: {fileID: 20315091121908676}
   m_Layer: 5
   m_Name: SpawnBrazos
-  m_TagString: Brazos
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,26 +228,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &20315091121908676
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8576451188089815953}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68eca740052c9344695de28cb1da5cd0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8820709534612284162
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,13 +520,11 @@ GameObject:
   - component: {fileID: 8883456608558673920}
   - component: {fileID: 8883456608558673925}
   - component: {fileID: 8883456608558673924}
-  - component: {fileID: 8883456608558673927}
   - component: {fileID: 8883456608558673926}
   - component: {fileID: 8883456608558673921}
-  - component: {fileID: 2618433798109366170}
   m_Layer: 5
   m_Name: FotoPerfil
-  m_TagString: Cuerpo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -658,24 +593,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8883456608558673927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8883456608558673923}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be810391cfd8f647b848657a7091db1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _imagen: {fileID: 0}
-  _seleccionado: 0
-  _nombreTxt: {fileID: 8883456608398437355}
-  _edadTxt: {fileID: 8883456608922312176}
-  _distanciaTxt: {fileID: 8883456610053351011}
 --- !u!61 &8883456608558673926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -723,26 +640,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &2618433798109366170
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8883456608558673923}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68eca740052c9344695de28cb1da5cd0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8883456608922312077
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8883456609748595362
 RectTransform:
   m_ObjectHideFlags: 0

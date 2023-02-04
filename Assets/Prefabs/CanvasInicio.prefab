@@ -1084,7 +1084,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8772448111055275378}
+  - {fileID: 2880903212772869696}
   m_Father: {fileID: 7789306481643346371}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1892,7 +1892,7 @@ MonoBehaviour:
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   m_InputValidator: {fileID: 0}
---- !u!1001 &213252118843454834
+--- !u!1001 &6679795429693437504
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1929,11 +1929,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8883456608558673920, guid: 169dc3326d84cf143b63f611b0694eec, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 951.0777
+      value: 1122.9922
       objectReference: {fileID: 0}
     - target: {fileID: 8883456608558673920, guid: 169dc3326d84cf143b63f611b0694eec, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1560.2388
+      value: 2444.3613
       objectReference: {fileID: 0}
     - target: {fileID: 8883456608558673920, guid: 169dc3326d84cf143b63f611b0694eec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1965,11 +1965,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8883456608558673920, guid: 169dc3326d84cf143b63f611b0694eec, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000023842
+      value: 2.6738
       objectReference: {fileID: 0}
     - target: {fileID: 8883456608558673920, guid: 169dc3326d84cf143b63f611b0694eec, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 340
+      value: -0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 8883456608558673920, guid: 169dc3326d84cf143b63f611b0694eec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1987,14 +1987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FotoPerfil
       objectReference: {fileID: 0}
-    - target: {fileID: 8883456609748595389, guid: 169dc3326d84cf143b63f611b0694eec, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 169dc3326d84cf143b63f611b0694eec, type: 3}
---- !u!224 &8772448111055275378 stripped
+--- !u!224 &2880903212772869696 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8883456608558673920, guid: 169dc3326d84cf143b63f611b0694eec, type: 3}
-  m_PrefabInstance: {fileID: 213252118843454834}
+  m_PrefabInstance: {fileID: 6679795429693437504}
   m_PrefabAsset: {fileID: 0}

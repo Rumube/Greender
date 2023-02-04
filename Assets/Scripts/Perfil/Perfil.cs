@@ -33,7 +33,7 @@ public class Perfil : MonoBehaviour
 
     private void Start()
     {
-        GenerarNuevoPerfil();
+        //GenerarNuevoPerfil();
     }
 
     // Update is called once per frame
@@ -48,21 +48,25 @@ public class Perfil : MonoBehaviour
 
     public void GenerarNuevoPerfil()
     {
-        _bio.Clear();
-        _etiquetas.Clear();
-
-        GenerarNombre();
-        GenerarEtiquetas();
-        GenerateBio();
-        GenerarImagen();
-        GenerateEdad();
-        GenerateDistancia();
-        CargarData();
-        GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().CargarEscena(this);
-        if (GetComponent<GameManager>()._gameState != GameManager.GAME_STATE.SELECCION)
+        if (!_isUser)
         {
-            GetComponent<GameManager>().CargarSeleccionBoton();
+            _bio.Clear();
+            _etiquetas.Clear();
+
+            GenerarNombre();
+            GenerarEtiquetas();
+            GenerateBio();
+            GenerarImagen();
+            GenerateEdad();
+            GenerateDistancia();
+            CargarData();
+            GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().CargarEscena(this);
+            if (GetComponent<GameManager>()._gameState != GameManager.GAME_STATE.SELECCION)
+            {
+                GetComponent<GameManager>().CargarSeleccionBoton();
+            }
         }
+
     }
     private void GenerarNombre()
     {

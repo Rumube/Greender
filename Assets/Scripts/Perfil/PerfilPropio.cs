@@ -25,24 +25,25 @@ public class PerfilPropio : Perfil
     // Start is called before the first frame update
     void Start()
     {
-        _isUser= true;
+        _isUser = true;
         _name = null;
         _edad = 0;
         _etiquetasPropias.Clear();
-        if(_manager == null)
+        if (_manager == null)
         {
-            _manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+            _manager = GetComponent<GameManager>();
         }
+        GenerarImagenRandom();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void SetData()
     {
-        if(_name != "")
+        if (_name != "")
         {
             _nameTxt.GetComponent<TMP_InputField>().text = _name;
             _bioTxt.GetComponent<TMP_InputField>().text = _bio[0];
@@ -52,7 +53,7 @@ public class PerfilPropio : Perfil
     }
     private void SetEtiquetas()
     {
-        if(_etiquetasList!= null)
+        if (_etiquetasList != null)
         {
             ClearEtiquetas(_etiquetasParent.transform, _etiquetasList);
         }
@@ -65,7 +66,7 @@ public class PerfilPropio : Perfil
     }
     private void SetEtiquetas(Transform parent)
     {
-        if(_panelEtiquetasList != null)
+        if (_panelEtiquetasList != null)
         {
             ClearEtiquetas(_panelEtiquetasParent.transform, _panelEtiquetasList);
         }
@@ -119,6 +120,13 @@ public class PerfilPropio : Perfil
             newEt.GetComponent<Etiquetas>().SetUser(gameObject);
             newEt.GetComponent<Etiquetas>().SetEtiqueta(currentEt);
         }
+    }
+    public void GenerarImagenRandom()
+    {
+        _cuerpo.GetComponent<Image>().sprite = _posibleCuerpo[UnityEngine.Random.Range(0, _posibleCuerpo.Count - 1)];
+        _ojos.GetComponent<Image>().sprite = _posibleOjos[UnityEngine.Random.Range(0, _posibleOjos.Count - 1)];
+        _boca.GetComponent<Image>().sprite = _posibleBocas[UnityEngine.Random.Range(0, _posibleBocas.Count - 1)];
+        _brazos.GetComponent<Image>().sprite = _posibleBrazos[UnityEngine.Random.Range(0, _posibleBrazos.Count - 1)];
     }
     #endregion
 }

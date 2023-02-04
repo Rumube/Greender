@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public void CambiarEscena(GAME_STATE newState)
     {
         _gameState = newState;
-        //_inicio.SetActive(false);
+        _inicio.SetActive(false);
         _seleccion.SetActive(false);
         //_perfilPropio.SetActive(false);
         _perfil.SetActive(false);
@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
         switch (_gameState)
         {
             case GAME_STATE.INICIO:
+                _inicio.SetActive(true);
                 break;
             case GAME_STATE.SELECCION:
                 _seleccion.SetActive(true);
