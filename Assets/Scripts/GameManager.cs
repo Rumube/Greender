@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GAME_STATE.PERFIL_PROPIO:
                 _perfilPropio.SetActive(true);
-                _seleccion.GetComponent<PerfilPropio>().SetData();
+                _perfilPropio.GetComponent<PerfilPropio>().SetData();
                 break;
             case GAME_STATE.PERFIL:
                 _perfil.SetActive(true);
@@ -76,6 +76,10 @@ public class GameManager : MonoBehaviour
     public void CargarSeleccionBoton()
     {
         CambiarEscena(GAME_STATE.SELECCION);
+    }
+    public void CargarPerfilPropio()
+    {
+        CambiarEscena(GAME_STATE.PERFIL_PROPIO);
     }
     #endregion
 }

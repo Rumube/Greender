@@ -26,6 +26,10 @@ public class ImgPerfil : MonoBehaviour
     void Start()
     {
         _initPos = _imagen.transform.position;
+        if (_manager == null)
+        {
+            _manager = GameObject.FindGameObjectWithTag("Manager");
+        }
     }
 
     // Update is called once per frame

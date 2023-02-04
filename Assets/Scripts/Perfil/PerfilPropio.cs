@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using TreeEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,11 +16,19 @@ public class PerfilPropio : Perfil
     [Header("Panel Etiquetas")]
     public GameObject _panelEtiquetas;
     public GameObject _panelEtiquetasParent;
+    private GameManager _manager;
 
     // Start is called before the first frame update
     void Start()
     {
         _isUser= true;
+        _name = null;
+        _edad = 0;
+        _etiquetas.Clear();
+        if(_manager == null)
+        {
+            _manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+        }
     }
 
     // Update is called once per frame
@@ -33,9 +40,9 @@ public class PerfilPropio : Perfil
     {
         if(_name != null)
         {
-            _nameTxt.GetComponent<Text>().text = _name;
-            _bioTxt.GetComponent<Text>().text = _bio[0];
-            _edadTxt.GetComponent<Text>().text = _edad.ToString();
+            _nameTxt.GetComponent<TMP_InputField>().text = _name;
+            _bioTxt.GetComponent<TMP_InputField>().text = _bio[0];
+            _edadTxt.GetComponent<TMP_InputField>().text = _edad.ToString();
             SetEtiquetas();
         }
     }
@@ -56,7 +63,7 @@ public class PerfilPropio : Perfil
         _bio.Clear();
         _bio.Add(_bioTxt.GetComponent<TMP_InputField>().text);
         _edad = int.Parse(_edadTxt.GetComponent<TMP_InputField>().text);
-        GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.SELECCION);
+        _manager.GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.SELECCION);
     }
     public void InitPanelEtiquetas()
     {
