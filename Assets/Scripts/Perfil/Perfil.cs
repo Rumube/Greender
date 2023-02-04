@@ -41,7 +41,7 @@ public class Perfil : MonoBehaviour
     {
         if (_generarBio)
         {
-            _generarBio= false;
+            _generarBio = false;
             GenerarNuevoPerfil();
         }
     }
@@ -139,11 +139,16 @@ public class Perfil : MonoBehaviour
     }
     private void GenerarImagen()
     {
-        //TODO: GENERAR IMAGEN
+        _cuerpo = GameObject.FindGameObjectWithTag("Cuerpo");
+        _ojos = GameObject.FindGameObjectWithTag("Ojos");
+        _boca = GameObject.FindGameObjectWithTag("Boca");
+        _brazos = GameObject.FindGameObjectWithTag("Brazos");
+
+
         _cuerpo.GetComponent<Image>().sprite = _posibleCuerpo[Random.Range(0, _posibleCuerpo.Count - 1)];
-        _ojos.GetComponent<Image>().sprite = _posibleCuerpo[Random.Range(0, _posibleOjos.Count - 1)];
-        _boca.GetComponent<Image>().sprite = _posibleCuerpo[Random.Range(0, _posibleBocas.Count - 1)];
-        _brazos.GetComponent<Image>().sprite = _posibleCuerpo[Random.Range(0, _posibleBrazos.Count - 1)];
+        _ojos.GetComponent<Image>().sprite = _posibleOjos[Random.Range(0, _posibleOjos.Count - 1)];
+        _boca.GetComponent<Image>().sprite = _posibleBocas[Random.Range(0, _posibleBocas.Count - 1)];
+        _brazos.GetComponent<Image>().sprite = _posibleBrazos[Random.Range(0, _posibleBrazos.Count - 1)];
     }
     private void CargarData()
     {

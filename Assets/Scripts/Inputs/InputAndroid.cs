@@ -45,7 +45,7 @@ public class InputAndroid : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(touch.position, -Vector2.up, Mathf.Infinity);
         if (hit)
         {
-            if (hit.transform.gameObject.tag == "Perfil")
+            if (hit.transform.gameObject.tag == "Cuerpo")
             {
                 _perfil = hit.transform.gameObject;
                 GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().SeleccionarPerfil();
