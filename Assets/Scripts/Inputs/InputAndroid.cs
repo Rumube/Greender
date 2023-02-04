@@ -6,6 +6,9 @@ using UnityEngine.Windows;
 public class InputAndroid : MonoBehaviour
 {
     private GameObject _perfil = null;
+
+    public GameObject _likeAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +69,7 @@ public class InputAndroid : MonoBehaviour
             if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInLike())
             {
                 //LIKE!
+                _likeAnim.GetComponent<Animator>().Play("Like_Anim");
             }else if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInNope())
             {
                 //NOPE!
