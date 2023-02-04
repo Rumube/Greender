@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,6 +6,9 @@ using UnityEngine;
 
 public class PerfilUsuario : MonoBehaviour
 {
+    [Header("Referencias")]
+    public GameObject _etiquetasParent;
+    public GameObject _etiquetaGO;
     [Header("Datos Perfil Actual")]
     private string _name = "";
     private List<string> _etiquetas = new List<string>();
@@ -31,5 +35,12 @@ public class PerfilUsuario : MonoBehaviour
         _nombreTxt.text = _name;
         _edadTxt.text = _edad.ToString();
         _distanciaTxt.text = _distancia.ToString();
+
+        foreach (String currentEt in perfil._etiquetas)
+        {
+            GameObject newEt = Instantiate(_etiquetaGO, _etiquetasParent.transform);
+            newEt.name = currentEt;
+            newEt.GetComponentInChildren<TextMeshProUGUI>().text = currentEt;
+        }
     }
 }
