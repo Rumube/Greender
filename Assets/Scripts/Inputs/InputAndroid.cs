@@ -22,19 +22,16 @@ public class InputAndroid : MonoBehaviour
             {
                 case TouchPhase.Began:
                     //INPUT
-                    print("Began");
                     InputBegan(touch);
                     break;
                 case TouchPhase.Moved:
                 case TouchPhase.Stationary:
                     //DRAG
-                    print("DRAG");
                     InputDrag(touch);
                     break;
                 case TouchPhase.Ended:
                 case TouchPhase.Canceled:
                     //DROP
-                    print("DROP");
                     InputDrop();
                     break;
                 default:
@@ -51,6 +48,7 @@ public class InputAndroid : MonoBehaviour
             if (hit.transform.gameObject.tag == "Perfil")
             {
                 _perfil = hit.transform.gameObject;
+                GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().SeleccionarPerfil();
             }
         }
     }
@@ -58,14 +56,14 @@ public class InputAndroid : MonoBehaviour
     {
         if(_perfil != null)
         {
-            _perfil.GetComponent<ImgPerfil>().MovePerfil(touch.position);
+            GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().MovePerfil(touch.position);
         }
     }
     private void InputDrop()
     {
         if(_perfil != null)
         {
-            _perfil.GetComponent<ImgPerfil>().Volver();
+            GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().Volver();
             _perfil = null;
         }
     }

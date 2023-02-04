@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Perfil
   - Selector
+  - Manager
   layers:
   - Default
   - TransparentFX
