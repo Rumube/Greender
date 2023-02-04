@@ -16,11 +16,20 @@ public class PerfilPropio : Perfil
     [Header("Panel Etiquetas")]
     public GameObject _panelEtiquetas;
     public GameObject _panelEtiquetasParent;
+    private GameManager _manager;
 
     // Start is called before the first frame update
     void Start()
     {
         _isUser= true;
+        _name = null;
+        _bio = null;
+        _edad = 0;
+        _etiquetas.Clear();
+        if(_manager == null)
+        {
+            _manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+        }
     }
 
     // Update is called once per frame
@@ -30,7 +39,7 @@ public class PerfilPropio : Perfil
     }
     public void SetData()
     {
-        if(_name != null)
+        if(_name != "")
         {
             _nameTxt.GetComponent<Text>().text = _name;
             _bioTxt.GetComponent<Text>().text = _bio[0];

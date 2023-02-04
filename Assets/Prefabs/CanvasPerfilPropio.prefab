@@ -572,7 +572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5096259070732019144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -689,13 +689,13 @@ MonoBehaviour:
   _posibleEtiquetas: []
   _posibleNombres: []
   _posibleBio: []
-  _nameTxt: {fileID: 0}
-  _bioTxt: {fileID: 0}
-  _edadTxt: {fileID: 0}
-  _etiquetaGO: {fileID: 0}
-  _etiquetasParent: {fileID: 0}
-  _panelEtiquetas: {fileID: 0}
-  _panelEtiquetasParent: {fileID: 0}
+  _nameTxt: {fileID: 5096259071785235670}
+  _bioTxt: {fileID: 5096259070918075516}
+  _edadTxt: {fileID: 5096259070798460711}
+  _etiquetaGO: {fileID: 121770656487547377, guid: dbb66679c7affe743aa71f15d8a1e864, type: 3}
+  _etiquetasParent: {fileID: 5096259071148502638}
+  _panelEtiquetas: {fileID: 5096259070894740220}
+  _panelEtiquetasParent: {fileID: 5096259070845012031}
 --- !u!1 &5096259070772394805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,9 +1908,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1526475360}
         m_TargetAssemblyTypeName: PerfilPropio, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SetPerfilData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
