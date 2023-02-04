@@ -59,6 +59,10 @@ public class Perfil : MonoBehaviour
         GenerateDistancia();
         CargarData();
         GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().CargarEscena(this);
+        if (GetComponent<GameManager>()._gameState != GameManager.GAME_STATE.SELECCION)
+        {
+            GetComponent<GameManager>().CargarSeleccionBoton();
+        }
     }
     private void GenerarNombre()
     {

@@ -58,28 +58,47 @@ public class InputAndroid : MonoBehaviour
     }
     private void InputDrag(Touch touch)
     {
-        if(_perfil != null)
+        if (_perfil != null)
         {
             GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().MovePerfil(touch.position);
         }
     }
     private void InputDrop()
     {
-        if(_perfil != null)
+        if (_perfil != null)
         {
             if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInLike())
             {
-                //LIKE!
-                _likeAnim.GetComponent<Animator>().Play("Like_Anim");
-            }else if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInNope())
+                Like();
+            }
+            else if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInNope())
             {
-                //NOPE!
-                _nopeAnim.GetComponent<Animator>().Play("Nope_Anim");
-                GetComponent<Perfil>().GenerarNuevoPerfil();
+                Nope();
             }
             GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().Volver();
 
             _perfil = null;
         }
+    }
+    public void Like()
+    {
+        //LIKE!
+        //LIGAR?
+        if (GetComponent<GameManager>()._gameState != GameManager.GAME_STATE.SELECCION)
+        {
+            GetComponent<GameManager>().CargarSeleccionBoton();
+        }
+        _likeAnim.GetComponent<Animator>().Play("Like_Anim");
+        GetComponent<Perfil>().GenerarNuevoPerfil();
+    }
+    public void Nope()
+    {
+        //NOPE!
+        if (GetComponent<GameManager>()._gameState != GameManager.GAME_STATE.SELECCION)
+        {
+            GetComponent<GameManager>().CargarSeleccionBoton();
+        }
+        _nopeAnim.GetComponent<Animator>().Play("Nope_Anim");
+        GetComponent<Perfil>().GenerarNuevoPerfil();
     }
 }
