@@ -9,6 +9,8 @@ public class InputAndroid : MonoBehaviour
 
     public GameObject _likeAnim;
     public GameObject _nopeAnim;
+    public GameObject _imgAnim;
+    public GameObject _textAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +91,8 @@ public class InputAndroid : MonoBehaviour
             GetComponent<GameManager>().CargarSeleccionBoton();
         }
         _likeAnim.GetComponent<Animator>().Play("Like_Anim");
+        //_textAnim.GetComponent<Animator>().Play("FadeOut");
+        //_imgAnim.GetComponent<Animator>().Play("FadeOut");
         GetComponent<Perfil>().GenerarNuevoPerfil();
     }
     public void Nope()
@@ -99,6 +103,8 @@ public class InputAndroid : MonoBehaviour
             GetComponent<GameManager>().CargarSeleccionBoton();
         }
         _nopeAnim.GetComponent<Animator>().Play("Nope_Anim");
+        //_textAnim.GetComponent<Animator>().Play("FadeOut");
+        //_imgAnim.GetComponent<Animator>().Play("FadeOut");
         GetComponent<Perfil>().GenerarNuevoPerfil();
     }
 }
