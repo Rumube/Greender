@@ -6,6 +6,9 @@ using UnityEngine.Windows;
 public class InputAndroid : MonoBehaviour
 {
     private GameObject _perfil = null;
+
+    public GameObject _likeAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +48,7 @@ public class InputAndroid : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(touch.position, -Vector2.up, Mathf.Infinity);
         if (hit)
         {
-            if (hit.transform.gameObject.tag == "Perfil")
+            if (hit.transform.gameObject.tag == "Cuerpo")
             {
                 _perfil = hit.transform.gameObject;
                 GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().SeleccionarPerfil();
@@ -66,6 +69,7 @@ public class InputAndroid : MonoBehaviour
             if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInLike())
             {
                 //LIKE!
+                _likeAnim.GetComponent<Animator>().Play("Like_Anim");
             }else if (GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().GetInNope())
             {
                 //NOPE!
