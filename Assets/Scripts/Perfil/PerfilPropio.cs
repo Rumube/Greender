@@ -23,7 +23,6 @@ public class PerfilPropio : Perfil
     {
         _isUser= true;
         _name = null;
-        _bio = null;
         _edad = 0;
         _etiquetas.Clear();
         if(_manager == null)
@@ -39,11 +38,11 @@ public class PerfilPropio : Perfil
     }
     public void SetData()
     {
-        if(_name != "")
+        if(_name != null)
         {
-            _nameTxt.GetComponent<Text>().text = _name;
-            _bioTxt.GetComponent<Text>().text = _bio[0];
-            _edadTxt.GetComponent<Text>().text = _edad.ToString();
+            _nameTxt.GetComponent<TMP_InputField>().text = _name;
+            _bioTxt.GetComponent<TMP_InputField>().text = _bio[0];
+            _edadTxt.GetComponent<TMP_InputField>().text = _edad.ToString();
             SetEtiquetas();
         }
     }
@@ -64,7 +63,7 @@ public class PerfilPropio : Perfil
         _bio.Clear();
         _bio.Add(_bioTxt.GetComponent<TMP_InputField>().text);
         _edad = int.Parse(_edadTxt.GetComponent<TMP_InputField>().text);
-        GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.SELECCION);
+        _manager.GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.SELECCION);
     }
     public void InitPanelEtiquetas()
     {
