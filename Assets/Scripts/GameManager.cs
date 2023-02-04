@@ -64,6 +64,12 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    public void CheckMatch()
+    {
+        
+    }
+
     #region Botones
     public void CargarSeleccionBoton()
     {
