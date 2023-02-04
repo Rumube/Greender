@@ -59,6 +59,10 @@ public class Perfil : MonoBehaviour
         GenerateDistancia();
         CargarData();
         GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().CargarEscena(this);
+        if (GetComponent<GameManager>()._gameState != GameManager.GAME_STATE.SELECCION)
+        {
+            GetComponent<GameManager>().CargarSeleccionBoton();
+        }
     }
     private void GenerarNombre()
     {
@@ -143,7 +147,6 @@ public class Perfil : MonoBehaviour
         _ojos = GameObject.FindGameObjectWithTag("Ojos");
         _boca = GameObject.FindGameObjectWithTag("Boca");
         _brazos = GameObject.FindGameObjectWithTag("Brazos");
-        
 
         _cuerpo.GetComponent<Image>().sprite = _posibleCuerpo[Random.Range(0, _posibleCuerpo.Count - 1)];
         _ojos.GetComponent<Image>().sprite = _posibleOjos[Random.Range(0, _posibleOjos.Count - 1)];

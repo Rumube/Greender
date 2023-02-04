@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GAME_STATE.PERFIL_PROPIO:
                 _perfilPropio.SetActive(true);
-                _perfilPropio.GetComponent<PerfilPropio>().SetData();
+                //_perfilPropio.GetComponent<PerfilPropio>().SetData();
                 break;
             case GAME_STATE.PERFIL:
                 _perfil.SetActive(true);

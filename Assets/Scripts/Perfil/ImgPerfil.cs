@@ -64,7 +64,7 @@ public class ImgPerfil : MonoBehaviour
     public void SeleccionarPerfil()
     {
         _seleccionado = true;
-        _finSelect = Time.realtimeSinceStartup + 0.05f;
+        _finSelect = Time.realtimeSinceStartup + 0.09f;
     }
     public void CargarEscena(Perfil perfil)
     {
@@ -90,4 +90,11 @@ public class ImgPerfil : MonoBehaviour
     {
         return _inNope;
     }
+
+    #region Boton
+    public void CargarPerfilPropio()
+    {
+        _manager.GetComponent<GameManager>().CargarPerfilPropio();
+    }
+    #endregion
 }

@@ -13,10 +13,14 @@ public class PerfilPropio : Perfil
     public GameObject _edadTxt;
     public GameObject _etiquetaGO;
     public GameObject _etiquetasParent;
+    private List<GameObject> _etiquetasList;
     [Header("Panel Etiquetas")]
     public GameObject _panelEtiquetas;
     public GameObject _panelEtiquetasParent;
+    private List<GameObject> _panelEtiquetasList;
     private GameManager _manager;
+    public GameObject _panelEtiquetasActuales;
+    public List<string> _etiquetasPropias = new List<string>();
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +28,7 @@ public class PerfilPropio : Perfil
         _isUser= true;
         _name = null;
         _edad = 0;
-        _etiquetas.Clear();
+        _etiquetasPropias.Clear();
         if(_manager == null)
         {
             _manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
@@ -38,7 +42,7 @@ public class PerfilPropio : Perfil
     }
     public void SetData()
     {
-        if(_name != null)
+        if(_name != "")
         {
             _nameTxt.GetComponent<TMP_InputField>().text = _name;
             _bioTxt.GetComponent<TMP_InputField>().text = _bio[0];
@@ -48,12 +52,51 @@ public class PerfilPropio : Perfil
     }
     private void SetEtiquetas()
     {
-        foreach (String currentEt in _etiquetas)
+        if(_etiquetasList!= null)
+        {
+            ClearEtiquetas(_etiquetasParent.transform, _etiquetasList);
+        }
+        foreach (String currentEt in _etiquetasPropias)
         {
             GameObject newEt = Instantiate(_etiquetaGO, _etiquetasParent.transform);
             newEt.name = currentEt;
             newEt.GetComponentInChildren<TextMeshProUGUI>().text = currentEt;
         }
+    }
+    private void SetEtiquetas(Transform parent)
+    {
+        if(_panelEtiquetasList != null)
+        {
+            ClearEtiquetas(_panelEtiquetasParent.transform, _panelEtiquetasList);
+        }
+        foreach (String currentEt in _etiquetasPropias)
+        {
+            GameObject newEt = Instantiate(_etiquetaGO, parent);
+            newEt.name = currentEt;
+            newEt.GetComponentInChildren<TextMeshProUGUI>().text = currentEt;
+        }
+    }
+    private void ClearEtiquetas(Transform parent, List<GameObject> etiquetas)
+    {
+        List<GameObject> list = new List<GameObject>(etiquetas);
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            Destroy(etiquetas[i]);
+        }
+        etiquetas.Clear();
+    }
+    public void EtiquetaPulsada(string etiqueta)
+    {
+        if (_etiquetasPropias.Contains(etiqueta))
+        {
+            _etiquetasPropias.Remove(etiqueta);
+        }
+        else
+        {
+            _etiquetasPropias.Add(etiqueta);
+        }
+        _panelEtiquetasActuales.GetComponent<EtiquetasActuales>().UpdateEtiquetas();
     }
 
     #region boton
@@ -67,11 +110,14 @@ public class PerfilPropio : Perfil
     }
     public void InitPanelEtiquetas()
     {
-        foreach (String currentEt in _posibleEtiquetas)
+        foreach (String currentEt in _manager.GetComponent<Perfil>()._posibleEtiquetas)
         {
             GameObject newEt = Instantiate(_etiquetaGO, _panelEtiquetasParent.transform);
             newEt.name = currentEt;
             newEt.GetComponentInChildren<TextMeshProUGUI>().text = currentEt;
+            newEt.GetComponent<Etiquetas>().SetPulsada(true);
+            newEt.GetComponent<Etiquetas>().SetUser(gameObject);
+            newEt.GetComponent<Etiquetas>().SetEtiqueta(currentEt);
         }
     }
     #endregion
