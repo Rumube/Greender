@@ -41,7 +41,7 @@ public class PerfilPropio : Perfil
     }
     public void SetData()
     {
-        if(_name != null)
+        if(_name != "")
         {
             _nameTxt.GetComponent<TMP_InputField>().text = _name;
             _bioTxt.GetComponent<TMP_InputField>().text = _bio[0];

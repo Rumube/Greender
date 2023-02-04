@@ -90,4 +90,11 @@ public class ImgPerfil : MonoBehaviour
     {
         return _inNope;
     }
+
+    #region Boton
+    public void CargarPerfilPropio()
+    {
+        _manager.GetComponent<GameManager>().CargarPerfilPropio();
+    }
+    #endregion
 }
