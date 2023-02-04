@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
                 _seleccion.GetComponent<ImgPerfil>().CargarEscena(GetComponent<Perfil>());
                 break;
             case GAME_STATE.PERFIL_PROPIO:
+                _perfilPropio.SetActive(true);
+                _seleccion.GetComponent<PerfilPropio>().SetData();
                 break;
             case GAME_STATE.PERFIL:
                 _perfil.SetActive(true);
