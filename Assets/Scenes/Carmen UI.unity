@@ -2267,6 +2267,62 @@ MonoBehaviour:
   - Me gustan las verduras altas.
   - "No veas como la muevo, \xBFquieres verme moverlo bien?"
   - No todo gira entorno al tallo.
+  _posibleFinal:
+  - "La cita sali\xF3 bien, seguisteis quedando y fuisteis felices hasta que la ensalada
+    os separ\xF3."
+  - "La cita fue esplendida, hac\xEDais tan buena pareja que adornaron un poke juntos."
+  - La cita fue muy bien, quedaron en un huerto cercano con la mala suerte de se
+    convirtieron en alimento de unos conejos.
+  - "La cita fue incre\xEDble, form\xE1is una pareja tan equilibrada que incluso
+    hicisteis un plato vegano juntos, hasta que apareci\xF3 una berenjena que te
+    rob\xF3 la cita."
+  - "La cita fue muy divertida, pero desafortunadamente, paseando por el huerto no
+    sab\xEDais que era hogar de algunos p\xE1jaros y tu cita termin\xF3 convirti\xE9ndose
+    en su alimento."
+  - "T\xFA cita iba bien hasta que os topasteis con un topo, no veas como devoran
+    verduras esos hijos de P$%@."
+  - "Tu cita fue un maldito desastre, tras decirle que eras team frio la atmosfera
+    del lugar se torn\xF3 un tanto violenta, no veas como te parti\xF3 la madre."
+  - "La cita iba regulinchi y a\xFAn m\xE1s cuando sali\xF3 el tema de echar ra\xEDces,
+    no est\xE1s ready para esa mierda."
+  - "Todo iba bien en tu cita hasta que empez\xF3 a salirle gusanos por todas partes
+    y eres al\xE9rgico a esos bichos penetrantes."
+  - "Tu cita promet\xEDa hasta que te diste cuenta de que era un tomate con disfraz
+    de verdura y no te va el rollo frutas, o tal vez s\xED? "
+  - "Realmente no hay cita, esto no existe, es un videojuego hecho en la Global Game
+    Jam, espera! Yo existo?! Y t\xFA?!"
+  - "La cita fue de locos, os fumasteis unos or\xE9ganos y os abonasteis hasta el
+    amanecer, acto seguido con la luz del d\xEDa te diste cuenta de que tu cita era
+    una rata."
+  - "Fuiste al \xE1rbol del campo de al lado para hacer cruising con tu cita, resulta
+    que te F%\u20AC#@ a tu padre."
+  - "Apareciste a la hora designada para disfrutar del roc\xEDo ma\xF1anero, resulta
+    que tu cita eran 20 de esas hijas de fruta con 6 patas llamadas hormigas, te
+    vaciaron los bolsillos."
+  - "Estabas preparado para ir a t\xFA cita, pero viste a la banda de good bunny
+    merodeando a una hanegada de ti y no saliste de casa porque no te hac\xEDa mucha
+    gracia morir destripado."
+  - "Te acabas de dar cuenta de que tu cita es de muy lejos y bueno... tu primo lo
+    tienes justo en la otra habitaci\xF3n."
+  - Tu cita iba bien hasta que te cagaste encima porque en la cena te pasaste comiendo
+    abono.
+  - "Fumasteis hierbabuena y os pusisteis hasta arriba de pesticidas, todo iba perfectamente
+    hasta que se os fue el coloc\xF3n y te diste cuenta de que tu cita era... un
+    p\xE1jaro!?"
+  - "Tu cita iba incre\xEDble, al d\xEDa siguiente quedasteis en un campo cercano
+    a hacer un picnic y un cortac\xE9sped trituro a tu cita, as\xED que vuelta empezar..."
+  - "La mejor cita de tu vida, planeasteis un viaje por mar y todo, una l\xE1stima
+    que el Totanic se chocase contra una lechuga iceberg, se hundiera y solo cupieras
+    t\xFA en un tabl\xF3n de madera, menudo ego\xEDsta hijo de la grand\xEDsima fruta
+    eres, no?"
+  - "Todo iba bien, hasta que te diste cuenta de que tu cita estaba enganchada a
+    los fertilizantes artificiales y empez\xF3 a hablar en un idioma que desconoces,
+    Sales huyendo de ese manicomio."
+  - "Tu cita iba como la seda, pero de repente de uno de los muros del campo sale
+    un humano colosal vegano, se come a tu cita y t\xFA pues juras acabar con todos
+    ellos."
+  - "Sabias que era una cita de solo una noche, te dej\xF3 roto, pero por fuera,
+    porque por dentro estas como coco, como nuevo, Azuuuuuul, azul como el mar Azuuuuul...."
 --- !u!114 &1900153695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2386,6 +2442,7 @@ MonoBehaviour:
   _posibleEtiquetas: []
   _posibleNombres: []
   _posibleBio: []
+  _posibleFinal: []
   _nameTxt: {fileID: 1520402268}
   _bioTxt: {fileID: 1648449550}
   _edadTxt: {fileID: 633173040}
