@@ -244,11 +244,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7789306481643346371}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 417, y: 2689}
+  m_AnchoredPosition: {x: 462, y: 2689}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2098642195079480467
@@ -358,11 +358,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7789306481643346371}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 142, y: 2689}
+  m_AnchoredPosition: {x: 232, y: 2689}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3832817210161207396
@@ -951,11 +951,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7789306481643346371}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 967, y: 2689}
+  m_AnchoredPosition: {x: 893, y: 2693}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6475349082239737233
@@ -1065,11 +1065,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7789306481643346371}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 692, y: 2689}
+  m_AnchoredPosition: {x: 675, y: 2689}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5060162264143680798
@@ -1484,10 +1484,10 @@ RectTransform:
   m_Children:
   - {fileID: 7789306481912353212}
   - {fileID: 7789306482394711060}
-  - {fileID: 1033197910880363672}
-  - {fileID: 184411610725578062}
   - {fileID: 6237595535668245210}
+  - {fileID: 1033197910880363672}
   - {fileID: 1118398678205756544}
+  - {fileID: 184411610725578062}
   - {fileID: 4077153798552935536}
   m_Father: {fileID: 7789306482346365663}
   m_RootOrder: 1
