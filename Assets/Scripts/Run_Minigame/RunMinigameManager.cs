@@ -61,6 +61,11 @@ public class RunMinigameManager : MonoBehaviour
         {
             currentObs.transform.localPosition = new Vector2(currentObs.transform.localPosition.x - _speed*0.5f, 100);
         }
+
+        if (Time.realtimeSinceStartup >= _finishGameTime)
+        {
+            _inGame = false;
+        }
     }
 
     private void SpawnObs()
