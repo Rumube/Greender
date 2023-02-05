@@ -129,10 +129,15 @@ public class InputAndroid : MonoBehaviour
 
         int randomValue = Random.Range(baseMatch, 101);
 
-        if(randomValue >= 90)
+        if(randomValue >= 50)
         {
             result = true;
         }
         return result;
+    }
+
+    public void ToChatGame()
+    {
+        GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.CHAT);
     }
 }
