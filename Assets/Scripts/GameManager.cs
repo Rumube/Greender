@@ -113,5 +113,9 @@ public class GameManager : MonoBehaviour
     {
         CambiarEscena(GAME_STATE.PERFIL_PROPIO);
     }
+    public void Cerrar()
+    {
+        Application.Quit();
+    }
     #endregion
 }
