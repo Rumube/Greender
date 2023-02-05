@@ -35,6 +35,7 @@ public class Perfil : MonoBehaviour
     public List<string> _posibleEtiquetas = new List<string>();
     public List<string> _posibleNombres = new List<string>();
     public List<string> _posibleBio = new List<string>();
+    public List<string> _posibleFinal = new List<string>();
 
     private void Start()
     {
