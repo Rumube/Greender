@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         _perfil.SetActive(false);
         _chat.SetActive(false);
         _movimiento.SetActive(false);
-        //_cita.SetActive(false);
+        _cita.SetActive(false);
         //_fin.SetActive(false);
 
         switch (_gameState)
@@ -77,6 +77,9 @@ public class GameManager : MonoBehaviour
                 _movimiento.SetActive(true);
                 break;
             case GAME_STATE.CITA:
+                _currentClip = _clips[3];
+                StartTruck();
+                _cita.SetActive(true);
                 break;
             case GAME_STATE.FIN:
                 break;
