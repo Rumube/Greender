@@ -40,7 +40,7 @@ public class RunMinigameManager : MonoBehaviour
     void Start()
     {
         _manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
-        _nextObs = 0;
+        _nextObs = 999990;
         StartCoroutine(CuentaAtras());
     }
 

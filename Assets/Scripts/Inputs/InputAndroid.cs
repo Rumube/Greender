@@ -139,7 +139,7 @@ public class InputAndroid : MonoBehaviour
 
     public IEnumerator ToChatGame()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(3f);
         GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.CHAT);
     }
 }
