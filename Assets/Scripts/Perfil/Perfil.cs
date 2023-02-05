@@ -74,7 +74,6 @@ public class Perfil : MonoBehaviour
     private void GenerarNombre()
     {
         _name = _posibleNombres[Random.Range(0, _posibleNombres.Count - 1)];
-        print("Genera nombre");
     }
     private void GenerarEtiquetas()
     {
@@ -107,7 +106,6 @@ public class Perfil : MonoBehaviour
                 }
             } while (false);
         }
-        print("Genera etiquetas");
     }
     private void GenerateBio()
     {
@@ -166,6 +164,5 @@ public class Perfil : MonoBehaviour
         _ojos.GetComponent<Image>().sprite = _ojosS;
         _boca.GetComponent<Image>().sprite = _bocaS;
         _brazos.GetComponent<Image>().sprite = _brazosS;
-        print("Genera imagen");
     }
 }
