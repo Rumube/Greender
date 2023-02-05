@@ -816,7 +816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365648, guid: 9cdb12d7e3d962d4a820250d725429ef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365663, guid: 9cdb12d7e3d962d4a820250d725429ef, type: 3}
       propertyPath: m_Pivot.x
@@ -1093,10 +1093,6 @@ PrefabInstance:
     - target: {fileID: 7789306482346365648, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
       propertyPath: m_Name
       value: MinjuegoCorrer
-      objectReference: {fileID: 0}
-    - target: {fileID: 7789306482346365648, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365663, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
       propertyPath: m_Pivot.x
