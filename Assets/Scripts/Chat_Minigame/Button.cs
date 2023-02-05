@@ -26,6 +26,7 @@ public class Button : MonoBehaviour
 
     public void Click()
     {
+        GetComponent<Animator>().Play("ButtonAnim");
         if (correct)
         {
             //EJECUTAMOS BIEN

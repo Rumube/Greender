@@ -98,6 +98,7 @@ public class InputAndroid : MonoBehaviour
         else
         {
             _likeAnim.GetComponent<Animator>().Play("Match_Anim");
+            StartCoroutine(ToChatGame());
         }
     }
     public void Nope()
@@ -136,8 +137,9 @@ public class InputAndroid : MonoBehaviour
         return result;
     }
 
-    public void ToChatGame()
+    public IEnumerator ToChatGame()
     {
+        yield return new WaitForSeconds(0.5f);
         GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.CHAT);
     }
 }

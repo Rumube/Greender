@@ -816,7 +816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365648, guid: 9cdb12d7e3d962d4a820250d725429ef, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365663, guid: 9cdb12d7e3d962d4a820250d725429ef, type: 3}
       propertyPath: m_Pivot.x
@@ -1551,7 +1551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365648, guid: 75f71872f0b2c574ab9a3d46b96d42c5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365663, guid: 75f71872f0b2c574ab9a3d46b96d42c5, type: 3}
       propertyPath: m_Pivot.x
@@ -1673,6 +1673,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5482970261023459950, guid: 75f71872f0b2c574ab9a3d46b96d42c5, type: 3}
   m_PrefabInstance: {fileID: 1648449548}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1703746046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7789306482346365648, guid: 9cdb12d7e3d962d4a820250d725429ef, type: 3}
+  m_PrefabInstance: {fileID: 1085566280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1900153692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,7 +1715,7 @@ MonoBehaviour:
   _seleccion: {fileID: 1539189444}
   _perfilPropio: {fileID: 676910984}
   _perfil: {fileID: 676910984}
-  _chat: {fileID: 0}
+  _chat: {fileID: 1703746046}
   _movimiento: {fileID: 0}
   _cita: {fileID: 0}
   _fin: {fileID: 0}

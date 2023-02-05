@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         _seleccion.SetActive(false);
         _perfilPropio.SetActive(false);
         _perfil.SetActive(false);
-        //_chat.SetActive(false);
+        _chat.SetActive(false);
         //_movimiento.SetActive(false);
         //_cita.SetActive(false);
         //_fin.SetActive(false);
@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
                 _perfil.GetComponent<PerfilUsuario>().CargarEscena(GetComponent<Perfil>());
                 break;
             case GAME_STATE.CHAT:
+                _chat.SetActive(true);
                 break;
             case GAME_STATE.MOVIMIENTO:
                 break;
