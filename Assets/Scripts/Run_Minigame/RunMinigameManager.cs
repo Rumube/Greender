@@ -32,9 +32,14 @@ public class RunMinigameManager : MonoBehaviour
     public float _gameTime;
     public TextMeshProUGUI _contador;
 
+    private GameManager _manager;
+
+    private bool _played = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        _manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
         _nextObs = 0;
         StartCoroutine(CuentaAtras());
     }
@@ -50,6 +55,11 @@ public class RunMinigameManager : MonoBehaviour
         foreach (GameObject currentObs in _listObs)
         {
             currentObs.transform.localPosition = new Vector2(currentObs.transform.localPosition.x - 1, 0);
+        }
+        if (Time.realtimeSinceStartup >= _finishGameTime && _played)
+        {
+            _inGame = false;
+            _manager.CambiarEscena(GameManager.GAME_STATE.CITA);
         }
     }
 
@@ -92,6 +102,7 @@ public class RunMinigameManager : MonoBehaviour
     {
         _finishGameTime = Time.realtimeSinceStartup + _gameTime;
         _inGame = true;
+        _played = true;
     }
 
 }
