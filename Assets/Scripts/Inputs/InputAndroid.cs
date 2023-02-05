@@ -98,6 +98,7 @@ public class InputAndroid : MonoBehaviour
         else
         {
             _likeAnim.GetComponent<Animator>().Play("Match_Anim");
+            StartCoroutine(ToChatGame());
         }
     }
     public void Nope()
@@ -129,10 +130,16 @@ public class InputAndroid : MonoBehaviour
 
         int randomValue = Random.Range(baseMatch, 101);
 
-        if(randomValue >= 90)
+        if(randomValue >= 50)
         {
             result = true;
         }
         return result;
+    }
+
+    public IEnumerator ToChatGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.CHAT);
     }
 }
