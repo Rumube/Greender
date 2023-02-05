@@ -86,13 +86,13 @@ public class InputAndroid : MonoBehaviour
     {
         //LIKE!
         //LIGAR?
+
+
         if (GetComponent<GameManager>()._gameState != GameManager.GAME_STATE.SELECCION)
         {
             GetComponent<GameManager>().CargarSeleccionBoton();
         }
         _likeAnim.GetComponent<Animator>().Play("Like_Anim");
-        //_textAnim.GetComponent<Animator>().Play("FadeOut");
-        //_imgAnim.GetComponent<Animator>().Play("FadeOut");
         GetComponent<Perfil>().GenerarNuevoPerfil();
     }
     public void Nope()
@@ -103,8 +103,21 @@ public class InputAndroid : MonoBehaviour
             GetComponent<GameManager>().CargarSeleccionBoton();
         }
         _nopeAnim.GetComponent<Animator>().Play("Nope_Anim");
-        //_textAnim.GetComponent<Animator>().Play("FadeOut");
-        //_imgAnim.GetComponent<Animator>().Play("FadeOut");
         GetComponent<Perfil>().GenerarNuevoPerfil();
+    }
+
+
+    public bool isMatch()
+    {
+        bool result = true;
+
+        int count = 0;
+
+        foreach (string currentEt in GetComponent<PerfilPropio>()._etiquetas)
+        {
+
+        }
+
+        return result;
     }
 }

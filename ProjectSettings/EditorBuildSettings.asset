@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ruben_Perfiles.unity
     guid: 1345a1112424b0b4093bfcf99f648b6c
+  - enabled: 1
+    path: Assets/Scenes/Carmen UI.unity
+    guid: 921686e40f6945548bdc31b8fa895de8
   m_configObjects: {}
