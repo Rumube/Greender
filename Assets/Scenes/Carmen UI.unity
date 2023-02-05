@@ -1091,8 +1091,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 711245042}
     m_Modifications:
     - target: {fileID: 5229701770895310144, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
-      propertyPath: _inGame
-      value: 0
+      propertyPath: _contador
+      value: 
+      objectReference: {fileID: 1192915602}
+    - target: {fileID: 5229701770895310144, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
+      propertyPath: _finishGameTime
+      value: 32.5
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365648, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
       propertyPath: m_Name
@@ -1100,7 +1104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365648, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7789306482346365663, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
       propertyPath: m_Pivot.x
@@ -1193,6 +1197,141 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7789306482346365663, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
   m_PrefabInstance: {fileID: 1122958017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1192915600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1192915601}
+  - component: {fileID: 1192915603}
+  - component: {fileID: 1192915602}
+  m_Layer: 5
+  m_Name: Contador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1192915601
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192915600}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1122958018}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1192915602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192915600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 97f93076327b6934bbba6515de68760c, type: 2}
+  m_sharedMaterial: {fileID: -7340982476933987986, guid: 97f93076327b6934bbba6515de68760c, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4283387727
+  m_fontColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 178.9
+  m_fontSizeBase: 178.9
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1192915603
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192915600}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1206445460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1805,26 +1944,329 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 157f7c73d0f6e204584c2e1185bff1df, type: 3}
   - {fileID: 21300000, guid: daf488ad85ef72b41bf294411e423c7a, type: 3}
   _posibleEtiquetas:
-  - Futbol
-  - "M\xFAsica"
-  - Cine
-  - NFTS
-  - Anime
-  - Libros
-  - Teatro
+  - ECO
+  - BIO
+  - "F\xE9rtil"
+  - Biodegradable
+  - Interior
+  - Exterior
+  - Invernadero
+  - Fresca
+  - Sabrosa
+  - Gourmet
   _posibleNombres:
-  - Juan
-  - Marta
-  - Ana
-  - Paco
+  - Patroklo
+  - Jeremiah
+  - Erjony
+  - Jusepe
+  - Verdie
+  - Carlitros
+  - Anegada
+  - Ladelcuc
+  - Anaxtasia
+  - Dimitrin
+  - Pedrito
+  - Marquitos
+  - Eustakia
+  - Kisa
+  - Rubenete
+  - Danielin
+  - Raquel
+  - Rosa
+  - Pau
+  - ElJesusete
+  - ToAbonao
+  - "Ra\xEDzota"
+  - Andromeda
+  - Gandolf
+  - Fredo
+  - Som
+  - Pippon
+  - Morry
+  - Arakorn
+  - Kalerda
+  - Dovahpin
+  - Mojadet
+  - Sylvano
+  - DuroMaduro
+  - "Yamet\xE9"
+  - Kudasai
+  - Choana
+  - Fela
+  - Felo
+  - Mitriv
+  - Proto
+  - Goblen
+  - Mantra
+  - Gepeta
+  - Tomasin
+  - ElQueTeAbona
+  - Feliciana
+  - Andreita
+  - Jenny
+  - Zulema
+  - Nunu
+  - Lulu
+  - ElPeseta
+  - Akiles
+  - Alejandrus
+  - Aboneitor
+  - Apascal
+  - Florence
+  - Raisu
+  - Qwerty
+  - Linax
+  - Wandiws
+  - YoSoyChovani
+  - Elrand
+  - Saruki
+  - Calisto
+  - Calix
+  - ElNane
+  - Verde
+  - Piedrita
+  - Lol
+  - Artemisa
+  - Lele
+  - Pony
+  - Dogo
+  - Anna
+  - Jessy
+  - Rafa
+  - Rafeta
+  - Rotten
+  - Handulin
+  - Fotosintesin
+  - Elosmis
+  - Geoglina
+  - Tenyoca
+  - Einar
+  - Billy
+  - FacEfron
+  - Mumerman
+  - Stug
+  - Siyana
+  - Machete
+  - Vegane
+  - Manyas
+  - Subi
+  - Rollet
+  - Claus
+  - Claudia
+  - Ascen
+  - Tellor
+  - Sima
+  - Simbo
+  - Silvete
+  - Red
+  - Blue
+  - Leffy
+  - Koro
+  - Nemi
+  - Doflamengo
+  - Asta
+  - Astillin
+  - Jou
+  - Jay
+  - Leomi
+  - Leroyina
+  - "Ra\xEDztraza"
+  - Rooteno
+  - Keops
+  - Kelo
+  - Katine
+  - Coraline
+  - Porlok
+  - Petre
+  - Canyete
+  - Gollam
+  - Perisius
+  - Yassop
+  - Redo
+  - Tallete
+  - Tallotin
+  - Kayoten
+  - Somsang
+  - Endriod
+  - Susa
+  - Emesi
+  - Juanoso
+  - Tilla
+  - Izhan
+  - Camacho
+  - FranCallao
+  - Viktor
+  - MJ
+  - Helen
+  - Elena
+  - Malena
+  - Mabel
+  - Ryuk
+  - Elo
+  - Cleo
+  - Leire
+  - Celeste
+  - NPC
+  - Tarono
+  - Tanetsu
+  - Deleino
+  - Rastet
+  - LuisitoPRO
+  - Carmela
+  - Joel
+  - Ellie
+  - Yu
+  - Dankatsu
+  - Dunkoko
+  - Yitane
+  - Clauda
+  - Tidas
+  - Romero
+  - Heart
+  - Lopin
+  - Wuanito
+  - Kunito
+  - Tyrant
+  - Licker
+  - Ramiro
+  - Guink
+  - Pink
+  - Jurtila
+  - Gnoma
+  - Blasa
+  - Bless
+  - Popo
+  - Tonsu
+  - Azedezel
+  - Marcos
+  - Javier
+  - Juani
+  - Mabi
+  - Teresa
+  - Tess
+  - Lluna
+  - Clark
+  - Isaac
+  - Tom
+  - Lepolo
+  - Tutankapon
+  - Elias
+  - Triti
+  - Roberto
+  - Albertito
+  - Alexandre
+  - Dreus
+  - Janina
+  - Jasper
+  - Winie
+  - Pooh
+  - Nastin
+  - Cubel
+  - Pozzi
+  - Vendetta
+  - ToxicVeg
+  - Garzu
+  - Garuda
+  - Ash
+  - Misty
+  - Brook
+  - Nasty
+  - Jurel
+  - Salmoncio
+  - Truchico
+  - Tretino
+  - Cru
+  - Sol
+  - Luna
+  - Sun
+  - Moon
+  - Obi
+  - Nabozius
+  - Nabbete
+  - Nap
+  - Nebote
+  - Nabitin
+  - Nebeta
+  - Carlota
+  - Zenoria
+  - Zenisu
+  - Zatan
+  - Zulesto
+  - Pastanaga
+  - Cucumbete
+  - Pepinote
+  - Pepete
+  - Nillo
+  - Pepi
+  - Cucumba
+  - Kecumba
   _posibleBio:
-  - Quiero llevarte al huerto
-  - Tremendo pepino
-  - COsas
-  - Esto es otra bio
-  - AAAAAAAA
-  - BBBBBBBBBB
-  - CCCCCCCC
+  - Quiero llevarte al huerto.
+  - Tremendo pepino.
+  - "Me gustar\xEDa una relaci\xF3n con la que echar ra\xEDces."
+  - Foto tallo no por favor.
+  - Me gusta una verdura con buenas tierras.
+  - No me gusta que hagan zumo conmigo en la primera noche.
+  - Busco a alguien maduro.
+  - Mi debilidad son las hojas grandes y duras.
+  - Perfecto/a para una comida saludable.
+  - Busco a alguien para formar una ensalada.
+  - "Que tenga el c\xE9sped cortadito."
+  - "Estoy tan caliente que podr\xEDa hacer un estofado."
+  - Si eres una fruta no me hables.
+  - "Odio los p\xE1jaros. "
+  - Se buscan frescas y maduras.
+  - No me pincho abono, todo natural.
+  - "Busco a alguien para hacer la fotos\xEDntesis. "
+  - Amante de los saltamontes.
+  - "Me encanta la tierra f\xE9rtil."
+  - "No me gustan las hortalizas modificadas gen\xE9ticamente. "
+  - Aporta o aparta.
+  - ' Verdurikah 100% Solterikah.'
+  - El sol como estilo de vida.
+  - "Los \xE1rboles nos esp\xEDan."
+  - "\xA1No al maltrato de frutas!"
+  - "Busco una relaci\xF3n de verdura y madura."
+  - Lo importante es el interior.
+  - Verdura que la tiene muy dura.
+  - Lechuga no por favor.
+  - "Creo que deber\xEDamos amar tambi\xE9n a las frutas."
+  - "La fotos\xEDntesis es mi pasi\xF3n."
+  - Tengo alergia a los caracoles.
+  - No soporto que fumen.
+  - No me gusta que me pelen.
+  - Me Flipa el abono artificial.
+  - Solo verduras de invernadero.
+  - "Sobreviv\xED a un tractor, Estoy muy fuerte."
+  - "Me encanta disfrutar del roc\xEDo."
+  - Soy team frio!
+  - Deseando viajar en carretilla.
+  - Me gusta que me mojen bien de agua.
+  - "Gan\xE9 a un conejo a un duelo de miradas."
+  - Me llevo bien con los caracoles.
+  - "Me encanta la monta\xF1a, mirarla desde lejos claro."
+  - "Mi prima dice que soy la alegr\xEDa de la huerta."
+  - "\xBFQu\xE9 le dijo el lechuga a la lechuga? \"Eres mi hoja gemela."
+  - "\xA1Soy una verdura divertida!"
+  - "Soy una verdura de coraz\xF3n tierno y siempre estoy listo para el amor."
+  - ' Mi sabor dulce y mi textura suave son solo algunas de mis mejores cualidades. '
+  - "No soy solo bueno para la salud, tambi\xE9n soy bueno para el alma."
+  - Soy una verdura de temporada y solo estoy disponible por un tiempo limitado.
+  - " Si est\xE1s buscando algo crujiente y lleno de vida, est\xE1s en el lugar correcto. "
+  - "Estoy buscando a alguien con quien compartir mis ra\xEDces."
+  - Soy un poco picante, pero siempre fresco y lleno de sabor.
+  - "\xBFQuieres ser mi compa\xF1ero de ensalada para siempre?"
+  - "Mi preservaci\xF3n es la clave para una relaci\xF3n saludable."
+  - "La vida es un regalo. Aprovecha cada d\xEDa al m\xE1ximo y vive conmigo."
+  - Mi sonrisa es mi arma para conquistar.
+  - No vas a encontrar a nadie mejor que yo.
+  - Te gusta The working dead?
+  - Me encanta ver el amanecer.
+  - "El regad\xEDo por goteo est\xE1 sobrevalorado."
+  - Me gustan las verduras de color oscuro.
+  - Me gustan las verduras altas.
+  - "No veas como la muevo, \xBFquieres verme moverlo bien?"
+  - No todo gira entorno al tallo.
 --- !u!114 &1900153695
 MonoBehaviour:
   m_ObjectHideFlags: 0
