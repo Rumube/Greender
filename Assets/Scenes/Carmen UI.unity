@@ -1939,26 +1939,329 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 157f7c73d0f6e204584c2e1185bff1df, type: 3}
   - {fileID: 21300000, guid: daf488ad85ef72b41bf294411e423c7a, type: 3}
   _posibleEtiquetas:
-  - Futbol
-  - "M\xFAsica"
-  - Cine
-  - NFTS
-  - Anime
-  - Libros
-  - Teatro
+  - ECO
+  - BIO
+  - "F\xE9rtil"
+  - Biodegradable
+  - Interior
+  - Exterior
+  - Invernadero
+  - Fresca
+  - Sabrosa
+  - Gourmet
   _posibleNombres:
-  - Juan
-  - Marta
-  - Ana
-  - Paco
+  - Patroklo
+  - Jeremiah
+  - Erjony
+  - Jusepe
+  - Verdie
+  - Carlitros
+  - Anegada
+  - Ladelcuc
+  - Anaxtasia
+  - Dimitrin
+  - Pedrito
+  - Marquitos
+  - Eustakia
+  - Kisa
+  - Rubenete
+  - Danielin
+  - Raquel
+  - Rosa
+  - Pau
+  - ElJesusete
+  - ToAbonao
+  - "Ra\xEDzota"
+  - Andromeda
+  - Gandolf
+  - Fredo
+  - Som
+  - Pippon
+  - Morry
+  - Arakorn
+  - Kalerda
+  - Dovahpin
+  - Mojadet
+  - Sylvano
+  - DuroMaduro
+  - "Yamet\xE9"
+  - Kudasai
+  - Choana
+  - Fela
+  - Felo
+  - Mitriv
+  - Proto
+  - Goblen
+  - Mantra
+  - Gepeta
+  - Tomasin
+  - ElQueTeAbona
+  - Feliciana
+  - Andreita
+  - Jenny
+  - Zulema
+  - Nunu
+  - Lulu
+  - ElPeseta
+  - Akiles
+  - Alejandrus
+  - Aboneitor
+  - Apascal
+  - Florence
+  - Raisu
+  - Qwerty
+  - Linax
+  - Wandiws
+  - YoSoyChovani
+  - Elrand
+  - Saruki
+  - Calisto
+  - Calix
+  - ElNane
+  - Verde
+  - Piedrita
+  - Lol
+  - Artemisa
+  - Lele
+  - Pony
+  - Dogo
+  - Anna
+  - Jessy
+  - Rafa
+  - Rafeta
+  - Rotten
+  - Handulin
+  - Fotosintesin
+  - Elosmis
+  - Geoglina
+  - Tenyoca
+  - Einar
+  - Billy
+  - FacEfron
+  - Mumerman
+  - Stug
+  - Siyana
+  - Machete
+  - Vegane
+  - Manyas
+  - Subi
+  - Rollet
+  - Claus
+  - Claudia
+  - Ascen
+  - Tellor
+  - Sima
+  - Simbo
+  - Silvete
+  - Red
+  - Blue
+  - Leffy
+  - Koro
+  - Nemi
+  - Doflamengo
+  - Asta
+  - Astillin
+  - Jou
+  - Jay
+  - Leomi
+  - Leroyina
+  - "Ra\xEDztraza"
+  - Rooteno
+  - Keops
+  - Kelo
+  - Katine
+  - Coraline
+  - Porlok
+  - Petre
+  - Canyete
+  - Gollam
+  - Perisius
+  - Yassop
+  - Redo
+  - Tallete
+  - Tallotin
+  - Kayoten
+  - Somsang
+  - Endriod
+  - Susa
+  - Emesi
+  - Juanoso
+  - Tilla
+  - Izhan
+  - Camacho
+  - FranCallao
+  - Viktor
+  - MJ
+  - Helen
+  - Elena
+  - Malena
+  - Mabel
+  - Ryuk
+  - Elo
+  - Cleo
+  - Leire
+  - Celeste
+  - NPC
+  - Tarono
+  - Tanetsu
+  - Deleino
+  - Rastet
+  - LuisitoPRO
+  - Carmela
+  - Joel
+  - Ellie
+  - Yu
+  - Dankatsu
+  - Dunkoko
+  - Yitane
+  - Clauda
+  - Tidas
+  - Romero
+  - Heart
+  - Lopin
+  - Wuanito
+  - Kunito
+  - Tyrant
+  - Licker
+  - Ramiro
+  - Guink
+  - Pink
+  - Jurtila
+  - Gnoma
+  - Blasa
+  - Bless
+  - Popo
+  - Tonsu
+  - Azedezel
+  - Marcos
+  - Javier
+  - Juani
+  - Mabi
+  - Teresa
+  - Tess
+  - Lluna
+  - Clark
+  - Isaac
+  - Tom
+  - Lepolo
+  - Tutankapon
+  - Elias
+  - Triti
+  - Roberto
+  - Albertito
+  - Alexandre
+  - Dreus
+  - Janina
+  - Jasper
+  - Winie
+  - Pooh
+  - Nastin
+  - Cubel
+  - Pozzi
+  - Vendetta
+  - ToxicVeg
+  - Garzu
+  - Garuda
+  - Ash
+  - Misty
+  - Brook
+  - Nasty
+  - Jurel
+  - Salmoncio
+  - Truchico
+  - Tretino
+  - Cru
+  - Sol
+  - Luna
+  - Sun
+  - Moon
+  - Obi
+  - Nabozius
+  - Nabbete
+  - Nap
+  - Nebote
+  - Nabitin
+  - Nebeta
+  - Carlota
+  - Zenoria
+  - Zenisu
+  - Zatan
+  - Zulesto
+  - Pastanaga
+  - Cucumbete
+  - Pepinote
+  - Pepete
+  - Nillo
+  - Pepi
+  - Cucumba
+  - Kecumba
   _posibleBio:
-  - Quiero llevarte al huerto
-  - Tremendo pepino
-  - COsas
-  - Esto es otra bio
-  - AAAAAAAA
-  - BBBBBBBBBB
-  - CCCCCCCC
+  - Quiero llevarte al huerto.
+  - Tremendo pepino.
+  - "Me gustar\xEDa una relaci\xF3n con la que echar ra\xEDces."
+  - Foto tallo no por favor.
+  - Me gusta una verdura con buenas tierras.
+  - No me gusta que hagan zumo conmigo en la primera noche.
+  - Busco a alguien maduro.
+  - Mi debilidad son las hojas grandes y duras.
+  - Perfecto/a para una comida saludable.
+  - Busco a alguien para formar una ensalada.
+  - "Que tenga el c\xE9sped cortadito."
+  - "Estoy tan caliente que podr\xEDa hacer un estofado."
+  - Si eres una fruta no me hables.
+  - "Odio los p\xE1jaros. "
+  - Se buscan frescas y maduras.
+  - No me pincho abono, todo natural.
+  - "Busco a alguien para hacer la fotos\xEDntesis. "
+  - Amante de los saltamontes.
+  - "Me encanta la tierra f\xE9rtil."
+  - "No me gustan las hortalizas modificadas gen\xE9ticamente. "
+  - Aporta o aparta.
+  - ' Verdurikah 100% Solterikah.'
+  - El sol como estilo de vida.
+  - "Los \xE1rboles nos esp\xEDan."
+  - "\xA1No al maltrato de frutas!"
+  - "Busco una relaci\xF3n de verdura y madura."
+  - Lo importante es el interior.
+  - Verdura que la tiene muy dura.
+  - Lechuga no por favor.
+  - "Creo que deber\xEDamos amar tambi\xE9n a las frutas."
+  - "La fotos\xEDntesis es mi pasi\xF3n."
+  - Tengo alergia a los caracoles.
+  - No soporto que fumen.
+  - No me gusta que me pelen.
+  - Me Flipa el abono artificial.
+  - Solo verduras de invernadero.
+  - "Sobreviv\xED a un tractor, Estoy muy fuerte."
+  - "Me encanta disfrutar del roc\xEDo."
+  - Soy team frio!
+  - Deseando viajar en carretilla.
+  - Me gusta que me mojen bien de agua.
+  - "Gan\xE9 a un conejo a un duelo de miradas."
+  - Me llevo bien con los caracoles.
+  - "Me encanta la monta\xF1a, mirarla desde lejos claro."
+  - "Mi prima dice que soy la alegr\xEDa de la huerta."
+  - "\xBFQu\xE9 le dijo el lechuga a la lechuga? \"Eres mi hoja gemela."
+  - "\xA1Soy una verdura divertida!"
+  - "Soy una verdura de coraz\xF3n tierno y siempre estoy listo para el amor."
+  - ' Mi sabor dulce y mi textura suave son solo algunas de mis mejores cualidades. '
+  - "No soy solo bueno para la salud, tambi\xE9n soy bueno para el alma."
+  - Soy una verdura de temporada y solo estoy disponible por un tiempo limitado.
+  - " Si est\xE1s buscando algo crujiente y lleno de vida, est\xE1s en el lugar correcto. "
+  - "Estoy buscando a alguien con quien compartir mis ra\xEDces."
+  - Soy un poco picante, pero siempre fresco y lleno de sabor.
+  - "\xBFQuieres ser mi compa\xF1ero de ensalada para siempre?"
+  - "Mi preservaci\xF3n es la clave para una relaci\xF3n saludable."
+  - "La vida es un regalo. Aprovecha cada d\xEDa al m\xE1ximo y vive conmigo."
+  - Mi sonrisa es mi arma para conquistar.
+  - No vas a encontrar a nadie mejor que yo.
+  - Te gusta The working dead?
+  - Me encanta ver el amanecer.
+  - "El regad\xEDo por goteo est\xE1 sobrevalorado."
+  - Me gustan las verduras de color oscuro.
+  - Me gustan las verduras altas.
+  - "No veas como la muevo, \xBFquieres verme moverlo bien?"
+  - No todo gira entorno al tallo.
 --- !u!114 &1900153695
 MonoBehaviour:
   m_ObjectHideFlags: 0
