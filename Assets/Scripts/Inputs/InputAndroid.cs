@@ -93,12 +93,12 @@ public class InputAndroid : MonoBehaviour
             {
                 GetComponent<GameManager>().CargarSeleccionBoton();
             }
+            GetComponent<Perfil>().GenerarNuevoPerfil();
         }
         else
         {
-            print("Match!!");
+            _likeAnim.GetComponent<Animator>().Play("Match_Anim");
         }
-        GetComponent<Perfil>().GenerarNuevoPerfil();
     }
     public void Nope()
     {
@@ -129,11 +129,15 @@ public class InputAndroid : MonoBehaviour
 
         int randomValue = Random.Range(baseMatch, 101);
 
-        if(randomValue >= 90)
+        if(randomValue >= 50)
         {
             result = true;
         }
-        print("Random Value" + randomValue);
         return result;
+    }
+
+    public void ToChatGame()
+    {
+        GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.CHAT);
     }
 }
