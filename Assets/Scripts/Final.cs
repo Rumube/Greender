@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Final : MonoBehaviour
 {
@@ -22,5 +23,11 @@ public class Final : MonoBehaviour
     public void SelectFinal()
     {
         _finalTxt.text = _manager.GetComponent<Perfil>()._posibleFinal[Random.Range(0, _manager.GetComponent<Perfil>()._posibleFinal.Count - 1)];
+    }
+
+    public IEnumerator ResestScene()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(0);
     }
 }
