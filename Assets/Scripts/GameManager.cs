@@ -26,6 +26,14 @@ public class GameManager : MonoBehaviour
     public GameObject _cita;
     public GameObject _fin;
 
+    public List<AudioClip> _clips = new List<AudioClip>();
+    public AudioClip _currentClip;
+
+    private void Start()
+    {
+        StartTruck();
+    }
+
     public void CambiarEscena(GAME_STATE newState)
     {
         _gameState = newState;
@@ -34,7 +42,7 @@ public class GameManager : MonoBehaviour
         _perfilPropio.SetActive(false);
         _perfil.SetActive(false);
         _chat.SetActive(false);
-        //_movimiento.SetActive(false);
+        _movimiento.SetActive(false);
         //_cita.SetActive(false);
         //_fin.SetActive(false);
 
@@ -52,7 +60,6 @@ public class GameManager : MonoBehaviour
                 //_perfilPropio.GetComponent<PerfilPropio>().SetData();
                 print("Perfil Propio");
                 _perfil.GetComponent<PerfilUsuario>().CargarEscena(GetComponent<PerfilPropio>());
-
                 break;
             case GAME_STATE.PERFIL:
                 _perfil.SetActive(true);
@@ -60,9 +67,14 @@ public class GameManager : MonoBehaviour
                 _perfil.GetComponent<PerfilUsuario>().CargarEscena(GetComponent<Perfil>());
                 break;
             case GAME_STATE.CHAT:
+                _currentClip = _clips[1];
+                StartTruck();
                 _chat.SetActive(true);
                 break;
             case GAME_STATE.MOVIMIENTO:
+                _currentClip = _clips[2];
+                StartTruck();
+                _movimiento.SetActive(true);
                 break;
             case GAME_STATE.CITA:
                 break;
@@ -73,9 +85,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CheckMatch()
+    public void StartTruck()
     {
-        
+        GetComponent<AudioSource>().clip = _currentClip;
+        GetComponent<AudioSource>().Play();
     }
 
     #region Botones

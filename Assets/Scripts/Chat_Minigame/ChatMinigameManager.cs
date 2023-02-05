@@ -11,14 +11,18 @@ public class ChatMinigameManager : MonoBehaviour
     public bool shootNow;
     public float gravityIncreasing;
     public float _gameTime;
-    public float _finishGameTime;
+    public float _finishGameTime = 9000000;
+    public bool _player = false;
 
     public GameObject _generador;
     public TextMeshProUGUI _contador;
 
+    private GameObject _manager;
+
     // Start is called before the first frame update
     void Start()
     {
+        _manager = GameObject.FindGameObjectWithTag("Manager");
         gravityIncreasing = 100;
         if (Instance == null)
         {
@@ -30,9 +34,10 @@ public class ChatMinigameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.realtimeSinceStartup >= _finishGameTime)
+        if(Time.realtimeSinceStartup >= _finishGameTime && _player)
         {
             _generador.GetComponent<EmojiTextsGenerator>()._gameStarted = false;
+            _manager.GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.MOVIMIENTO);
         }
     }
 
@@ -53,6 +58,7 @@ public class ChatMinigameManager : MonoBehaviour
     {
         _finishGameTime = Time.realtimeSinceStartup + _gameTime;
         _generador.GetComponent<EmojiTextsGenerator>()._gameStarted = true;
+        _player = true;
     }
 
 }

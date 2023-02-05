@@ -1830,6 +1830,7 @@ GameObject:
   - component: {fileID: 1900153694}
   - component: {fileID: 1900153693}
   - component: {fileID: 1900153697}
+  - component: {fileID: 1900153698}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Manager
@@ -1855,9 +1856,16 @@ MonoBehaviour:
   _perfilPropio: {fileID: 676910984}
   _perfil: {fileID: 676910984}
   _chat: {fileID: 1703746046}
-  _movimiento: {fileID: 0}
+  _movimiento: {fileID: 1999944233}
   _cita: {fileID: 0}
   _fin: {fileID: 0}
+  _clips:
+  - {fileID: 8300000, guid: b1ca2b6a979978c4e82817c1b1d06020, type: 3}
+  - {fileID: 8300000, guid: b2d9c335b66cb2e4e8c5ef4549de2586, type: 3}
+  - {fileID: 8300000, guid: 40914606a50837046b9e8d0fdc5ce9ce, type: 3}
+  - {fileID: 8300000, guid: 6c8b12ed047b2d447ba5b5c4e1ab82bf, type: 3}
+  - {fileID: 8300000, guid: b6f8994da91e98c488e25e6ea74dd0aa, type: 3}
+  _currentClip: {fileID: 8300000, guid: b1ca2b6a979978c4e82817c1b1d06020, type: 3}
 --- !u!114 &1900153694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2267,6 +2275,7 @@ MonoBehaviour:
   - Me gustan las verduras altas.
   - "No veas como la muevo, \xBFquieres verme moverlo bien?"
   - No todo gira entorno al tallo.
+  _posibleFinal: []
 --- !u!114 &1900153695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2386,6 +2395,7 @@ MonoBehaviour:
   _posibleEtiquetas: []
   _posibleNombres: []
   _posibleBio: []
+  _posibleFinal: []
   _nameTxt: {fileID: 1520402268}
   _bioTxt: {fileID: 1648449550}
   _edadTxt: {fileID: 633173040}
@@ -2398,10 +2408,111 @@ MonoBehaviour:
   _etiquetasPropias: []
   _maxEt: 3
   _currentNumberEt: 0
+--- !u!82 &1900153698
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900153692}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1955203723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 639860413409441486, guid: 75f71872f0b2c574ab9a3d46b96d42c5, type: 3}
   m_PrefabInstance: {fileID: 1648449548}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1999944233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7789306482346365648, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
+  m_PrefabInstance: {fileID: 1122958017}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2104644348 stripped
 GameObject:
