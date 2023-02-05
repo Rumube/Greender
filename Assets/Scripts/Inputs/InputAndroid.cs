@@ -93,12 +93,12 @@ public class InputAndroid : MonoBehaviour
             {
                 GetComponent<GameManager>().CargarSeleccionBoton();
             }
+            GetComponent<Perfil>().GenerarNuevoPerfil();
         }
         else
         {
-            print("Match!!");
+            _likeAnim.GetComponent<Animator>().Play("Match_Anim");
         }
-        GetComponent<Perfil>().GenerarNuevoPerfil();
     }
     public void Nope()
     {
@@ -133,7 +133,6 @@ public class InputAndroid : MonoBehaviour
         {
             result = true;
         }
-        print("Random Value" + randomValue);
         return result;
     }
 }
