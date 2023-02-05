@@ -17,6 +17,7 @@ public class RunMinigameManager : MonoBehaviour
 
     public float _spawnTiempo;
     public GameObject _spawnParent;
+    public GameObject _decoParent;
     public GameObject _obstaculo;
     public List<Sprite> _spritesFondo;
     public float _nextObs;
@@ -28,6 +29,7 @@ public class RunMinigameManager : MonoBehaviour
     public GameObject _normalPos;
 
     private List<GameObject> _listObs = new List<GameObject>();
+    private List<GameObject> _listFond = new List<GameObject>();
     public float _finishGameTime;
     public float _gameTime;
     public TextMeshProUGUI _contador;
@@ -51,11 +53,18 @@ public class RunMinigameManager : MonoBehaviour
         {
             _nextObs = Time.realtimeSinceStartup + _spawnTiempo;
             SpawnObs();
+            StartCoroutine(SpawnDecor());
         }
         foreach (GameObject currentObs in _listObs)
         {
             currentObs.transform.localPosition = new Vector2(currentObs.transform.localPosition.x - 1, 0);
         }
+
+        foreach (GameObject currentObs in _listFond)
+        {
+            currentObs.transform.localPosition = new Vector2(currentObs.transform.localPosition.x - 1*0.5f, 0);
+        }
+
         if (Time.realtimeSinceStartup >= _finishGameTime && _played)
         {
             _inGame = false;
@@ -79,8 +88,19 @@ public class RunMinigameManager : MonoBehaviour
         }
 
     }
-
-    private IEnumerator FinSalto()
+    private IEnumerator SpawnDecor()
+    {
+        int numRandom = Random.RandomRange(1, 4);
+        for (int i = 0; i < numRandom; i++)
+        {
+            int randomDecor = Random.Range(0, _spritesFondo.Count - 1);
+            GameObject newObs = Instantiate(_decorFondo, _decoParent.transform);
+            newObs.GetComponent<Image>().sprite = _spritesFondo[randomDecor];
+            _listFond.Add(newObs);
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+        private IEnumerator FinSalto()
     {
         yield return new WaitForSeconds(1);
         _inJump = false;
@@ -100,7 +120,7 @@ public class RunMinigameManager : MonoBehaviour
     }
     private void StartGame()
     {
-        _finishGameTime = Time.realtimeSinceStartup + _gameTime;
+        _finishGameTime = Time.realtimeSinceStartup + _finishGameTime;
         _inGame = true;
         _played = true;
     }

@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public GameObject _fin;
 
     public List<AudioClip> _clips = new List<AudioClip>();
+    public AudioClip _transitionClip;
     public AudioClip _currentClip;
 
     private void Start()
@@ -90,6 +91,15 @@ public class GameManager : MonoBehaviour
 
     public void StartTruck()
     {
+        StartCoroutine(esperaClip());
+    }
+
+    public IEnumerator esperaClip()
+    {
+
+        GetComponent<AudioSource>().clip = _transitionClip;
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(0.7f);
         GetComponent<AudioSource>().clip = _currentClip;
         GetComponent<AudioSource>().Play();
     }

@@ -566,6 +566,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1192915602}
     - target: {fileID: 5229701770895310144, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
+      propertyPath: _decoParent
+      value: 
+      objectReference: {fileID: 1767555571}
+    - target: {fileID: 5229701770895310144, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
       propertyPath: _finishGameTime
       value: 32.5
       objectReference: {fileID: 0}
@@ -660,6 +664,10 @@ PrefabInstance:
     - target: {fileID: 7789306482346365663, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284327718069303181, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
@@ -1218,6 +1226,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7789306482346365648, guid: 9cdb12d7e3d962d4a820250d725429ef, type: 3}
   m_PrefabInstance: {fileID: 1085566280}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1767555571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6065279268776455666, guid: ccaf2a5434bc8f54099c1e9239458968, type: 3}
+  m_PrefabInstance: {fileID: 1122958017}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1900153692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1278,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4a60fede7cbe6fa488654733b19ece08, type: 3}
   - {fileID: 8300000, guid: 77df31a0af0643d488a742ff088970f1, type: 3}
   - {fileID: 8300000, guid: 28ace7d5401ee9a458de72ce9923d876, type: 3}
+  _transitionClip: {fileID: 8300000, guid: e71bcc811de57bf4c9fc62d888dc35d6, type: 3}
   _currentClip: {fileID: 8300000, guid: 70a0fdfe9e18a3f438a1966554ce3096, type: 3}
 --- !u!114 &1900153694
 MonoBehaviour:
@@ -1608,6 +1622,7 @@ MonoBehaviour:
   - Pepi
   - Cucumba
   - Kecumba
+  - Uzumarp
   _posibleBio:
   - Quiero llevarte al huerto.
   - Tremendo pepino.
