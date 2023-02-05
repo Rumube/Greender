@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         _gameState = newState;
         _inicio.SetActive(false);
         _seleccion.SetActive(false);
-        //_perfilPropio.SetActive(false);
+        _perfilPropio.SetActive(false);
         _perfil.SetActive(false);
         //_chat.SetActive(false);
         //_movimiento.SetActive(false);
@@ -50,9 +50,13 @@ public class GameManager : MonoBehaviour
             case GAME_STATE.PERFIL_PROPIO:
                 _perfilPropio.SetActive(true);
                 //_perfilPropio.GetComponent<PerfilPropio>().SetData();
+                print("Perfil Propio");
+                _perfil.GetComponent<PerfilUsuario>().CargarEscena(GetComponent<PerfilPropio>());
+
                 break;
             case GAME_STATE.PERFIL:
                 _perfil.SetActive(true);
+                print("Perfil Otro");
                 _perfil.GetComponent<PerfilUsuario>().CargarEscena(GetComponent<Perfil>());
                 break;
             case GAME_STATE.CHAT:

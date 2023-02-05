@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PerfilUsuario : MonoBehaviour
 {
@@ -22,6 +23,17 @@ public class PerfilUsuario : MonoBehaviour
     public TextMeshProUGUI _distanciaTxt;
     public TextMeshProUGUI _edadTxt;
 
+    [Header("Foto")]
+    public GameObject _cuerpo;
+    public GameObject _ojos;
+    public GameObject _boca;
+    public GameObject _brazos;
+
+    public Sprite _cuerpoS;
+    public Sprite _ojosS;
+    public Sprite _bocaS;
+    public Sprite _brazosS;
+
     public void CargarEscena(Perfil perfil)
     {
         //SET DATA
@@ -30,6 +42,17 @@ public class PerfilUsuario : MonoBehaviour
         _distancia = perfil._distancia;
         _etiquetas = perfil._etiquetas;
         _bio = perfil._bio;
+
+        _cuerpoS = perfil._cuerpoS;
+        _ojos = perfil._ojos;
+        _bocaS= perfil._bocaS;
+        _brazosS = perfil._brazosS;
+
+        _cuerpo.GetComponent<Image>().sprite = _cuerpoS;
+        _ojos.GetComponent<Image>().sprite = _ojosS;
+        _boca.GetComponent<Image>().sprite = _bocaS;
+        _brazos.GetComponent<Image>().sprite = _brazosS;
+
         //UPDATE UI
 
         _nombreTxt.text = _name;
@@ -42,6 +65,12 @@ public class PerfilUsuario : MonoBehaviour
             newEt.name = currentEt;
             newEt.GetComponentInChildren<TextMeshProUGUI>().text = currentEt;
         }
+        string newBio = "";
+        foreach (string currentBio in _bio)
+        {
+            newBio += "\n -" + currentBio;
+        }
+        _bioTxt.text = newBio;
     }
 
     private void BorrarEtiquetas()
@@ -50,5 +79,10 @@ public class PerfilUsuario : MonoBehaviour
         {
             GameObject.Destroy(currentChild.gameObject);
         }
+    }
+
+    private void CargarFoto()
+    {
+
     }
 }

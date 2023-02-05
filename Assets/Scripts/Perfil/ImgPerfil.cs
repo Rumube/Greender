@@ -71,6 +71,7 @@ public class ImgPerfil : MonoBehaviour
     }
     public void CargarEscena(Perfil perfil)
     {
+        print("Cargar");
         _nombreTxt.text = perfil._name;
         _edadTxt.text = perfil._edad.ToString();
         _distanciaTxt.text = perfil._distancia.ToString();

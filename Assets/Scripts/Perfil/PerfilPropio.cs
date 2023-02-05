@@ -125,17 +125,27 @@ public class PerfilPropio : Perfil
     }
     public void GenerarImagenRandom()
     {
-        _cuerpo.GetComponent<Image>().sprite = _posibleCuerpo[UnityEngine.Random.Range(0, _posibleCuerpo.Count - 1)];
-        _ojos.GetComponent<Image>().sprite = _posibleOjos[UnityEngine.Random.Range(0, _posibleOjos.Count - 1)];
-        _boca.GetComponent<Image>().sprite = _posibleBocas[UnityEngine.Random.Range(0, _posibleBocas.Count - 1)];
-        _brazos.GetComponent<Image>().sprite = _posibleBrazos[UnityEngine.Random.Range(0, _posibleBrazos.Count - 1)];
+        _cuerpoS = _posibleCuerpo[UnityEngine.Random.Range(0, _posibleCuerpo.Count - 1)];
+        _ojosS = _posibleOjos[UnityEngine.Random.Range(0, _posibleOjos.Count - 1)];
+        _bocaS = _posibleBocas[UnityEngine.Random.Range(0, _posibleBocas.Count - 1)];
+        _brazosS = _posibleBrazos[UnityEngine.Random.Range(0, _posibleBrazos.Count - 1)];
+
+        _cuerpo.GetComponent<Image>().sprite = _cuerpoS;
+        _ojos.GetComponent<Image>().sprite = _ojosS;
+        _boca.GetComponent<Image>().sprite = _bocaS;
+        _brazos.GetComponent<Image>().sprite = _brazosS;
     }
     public void SaveDataInit()
     {
         _name = _nameTxt.GetComponent<TMP_InputField>().text;
         _edad = int.Parse(_edadTxt.GetComponent<TMP_InputField>().text);
+        _bio.Add(_bioTxt.GetComponent<TMP_InputField>().text);
         //NEXT SCENE
         InitDataEtiquetas();
+    }
+    public void ToPerfilPropio()
+    {
+        GetComponent<GameManager>().CambiarEscena(GameManager.GAME_STATE.PERFIL_PROPIO);
     }
     #endregion
     private void InitDataEtiquetas()
@@ -146,6 +156,7 @@ public class PerfilPropio : Perfil
             newEt.name = currentET;
             newEt.GetComponentInChildren<TextMeshProUGUI>().text = currentET;
             newEt.GetComponent<Etiquetas>().SetPulsada(true);
+            newEt.GetComponent<Etiquetas>().SetEtiqueta(currentET);
             _etiquetasList.Add(newEt);
         }
         string text = _currentNumberEt + " - " + _maxEt;

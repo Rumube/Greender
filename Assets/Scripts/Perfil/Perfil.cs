@@ -20,6 +20,11 @@ public class Perfil : MonoBehaviour
     public GameObject _boca;
     public GameObject _brazos;
 
+    public Sprite _cuerpoS;
+    public Sprite _ojosS;
+    public Sprite _bocaS;
+    public Sprite _brazosS;
+
     [Header("PosibleImg")]
     public List<Sprite> _posibleCuerpo = new List<Sprite>();
     public List<Sprite> _posibleOjos = new List<Sprite>();
@@ -33,7 +38,6 @@ public class Perfil : MonoBehaviour
 
     private void Start()
     {
-        //GenerarNuevoPerfil();
     }
 
     // Update is called once per frame
@@ -56,21 +60,21 @@ public class Perfil : MonoBehaviour
             GenerarNombre();
             GenerarEtiquetas();
             GenerateBio();
-            GenerarImagen();
             GenerateEdad();
             GenerateDistancia();
-            CargarData();
-            GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().CargarEscena(this);
+            GenerarImagen();
             if (GetComponent<GameManager>()._gameState != GameManager.GAME_STATE.SELECCION)
             {
                 GetComponent<GameManager>().CargarSeleccionBoton();
             }
+            GetComponent<GameManager>()._seleccion.GetComponent<ImgPerfil>().CargarEscena(this);
         }
 
     }
     private void GenerarNombre()
     {
         _name = _posibleNombres[Random.Range(0, _posibleNombres.Count - 1)];
+        print("Genera nombre");
     }
     private void GenerarEtiquetas()
     {
@@ -103,6 +107,7 @@ public class Perfil : MonoBehaviour
                 }
             } while (false);
         }
+        print("Genera etiquetas");
     }
     private void GenerateBio()
     {
@@ -152,13 +157,15 @@ public class Perfil : MonoBehaviour
         _boca = GameObject.FindGameObjectWithTag("Boca");
         _brazos = GameObject.FindGameObjectWithTag("Brazos");
 
-        _cuerpo.GetComponent<Image>().sprite = _posibleCuerpo[Random.Range(0, _posibleCuerpo.Count - 1)];
-        _ojos.GetComponent<Image>().sprite = _posibleOjos[Random.Range(0, _posibleOjos.Count - 1)];
-        _boca.GetComponent<Image>().sprite = _posibleBocas[Random.Range(0, _posibleBocas.Count - 1)];
-        _brazos.GetComponent<Image>().sprite = _posibleBrazos[Random.Range(0, _posibleBrazos.Count - 1)];
-    }
-    private void CargarData()
-    {
+        _cuerpoS = _posibleCuerpo[Random.Range(0, _posibleCuerpo.Count - 1)];
+        _ojosS = _posibleOjos[Random.Range(0, _posibleOjos.Count - 1)];
+        _bocaS = _posibleBocas[Random.Range(0, _posibleBocas.Count - 1)];
+        _brazosS = _posibleBrazos[Random.Range(0, _posibleBrazos.Count - 1)];
 
+        _cuerpo.GetComponent<Image>().sprite = _cuerpoS;
+        _ojos.GetComponent<Image>().sprite = _ojosS;
+        _boca.GetComponent<Image>().sprite = _bocaS;
+        _brazos.GetComponent<Image>().sprite = _brazosS;
+        print("Genera imagen");
     }
 }
