@@ -25,7 +25,10 @@ public class ImgPerfil : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _initPos = _imagen.transform.position;
+        if(_imagen != null)
+        {
+            _initPos = _imagen.transform.position;
+        }
         if (_manager == null)
         {
             _manager = GameObject.FindGameObjectWithTag("Manager");

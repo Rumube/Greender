@@ -11,9 +11,10 @@ public class PerfilPropio : Perfil
     public GameObject _nameTxt;
     public GameObject _bioTxt;
     public GameObject _edadTxt;
+    public TextMeshProUGUI _etiquetasTxt;
     public GameObject _etiquetaGO;
     public GameObject _etiquetasParent;
-    private List<GameObject> _etiquetasList;
+    private List<GameObject> _etiquetasList = new List<GameObject>();
     [Header("Panel Etiquetas")]
     public GameObject _panelEtiquetas;
     public GameObject _panelEtiquetasParent;
@@ -21,6 +22,8 @@ public class PerfilPropio : Perfil
     private GameManager _manager;
     public GameObject _panelEtiquetasActuales;
     public List<string> _etiquetasPropias = new List<string>();
+    public int _maxEt = 0;
+    public int _currentNumberEt = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -132,6 +135,36 @@ public class PerfilPropio : Perfil
         _name = _nameTxt.GetComponent<TMP_InputField>().text;
         _edad = int.Parse(_edadTxt.GetComponent<TMP_InputField>().text);
         //NEXT SCENE
+        InitDataEtiquetas();
     }
     #endregion
+    private void InitDataEtiquetas()
+    {
+        foreach (string currentET in GetComponent<Perfil>()._posibleEtiquetas)
+        {
+            GameObject newEt = Instantiate(_etiquetaGO, _etiquetasParent.transform);
+            newEt.name = currentET;
+            newEt.GetComponentInChildren<TextMeshProUGUI>().text = currentET;
+            newEt.GetComponent<Etiquetas>().SetPulsada(true);
+            _etiquetasList.Add(newEt);
+        }
+        string text = _currentNumberEt + " - " + _maxEt;
+        _etiquetasTxt.text = text;
+    }
+    public void CheckEtiquetas()
+    {
+        int count = 0;
+        _etiquetas.Clear();
+        foreach (GameObject currentEt in _etiquetasList)
+        {
+            if (currentEt.GetComponent<Etiquetas>()._selected)
+            {
+                count++;
+                _etiquetas.Add(currentEt.GetComponent<Etiquetas>().GetEtiqueta());
+            }
+        }
+        _currentNumberEt = count;
+        string text = _currentNumberEt + " - " + _maxEt;
+        _etiquetasTxt.text = text;
+    }
 }
